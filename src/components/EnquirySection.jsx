@@ -102,11 +102,16 @@ export default function EnquirySection() {
                                     <label className="text-sm font-semibold text-gray-600">
                                         Mobile Number*
                                     </label>
-                                    <div className="flex gap-2 mt-1">
-                                        <select className="
-                                            px-3 py-3 border rounded-xl bg-gray-50 
-                                            focus:ring-2 focus:ring-teal-500 outline-none
-                                        ">
+
+                                    <div className="flex items-center gap-2 mt-1 w-full">
+                                        <select
+                                            className="
+        w-20               /* FIXED WIDTH → No overflow */
+        px-2 py-3 
+        border rounded-xl bg-gray-50
+        focus:ring-2 focus:ring-teal-500 outline-none
+      "
+                                        >
                                             <option>+91</option>
                                             <option>+1</option>
                                             <option>+44</option>
@@ -115,13 +120,18 @@ export default function EnquirySection() {
                                         <input
                                             type="text"
                                             className="
-                                                flex-1 px-4 py-3 border rounded-xl 
-                                                bg-gray-50 focus:ring-2 focus:ring-teal-500 outline-none
-                                            "
+                                            w-[20px]
+        flex-1 
+        min-w-0           /* VERY IMPORTANT → prevents overflow */
+        px-3 py-3 
+        border rounded-xl bg-gray-50
+        focus:ring-2 focus:ring-teal-500 outline-none
+      "
                                             placeholder="Enter Mobile Number"
                                         />
                                     </div>
                                 </div>
+
 
                                 <div>
                                     <label className="text-sm font-semibold text-gray-600">
