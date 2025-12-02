@@ -35,7 +35,7 @@ export default function GoalsSection() {
             className="relative py-40 bg-fixed bg-center bg-cover"
             style={{
                 backgroundImage:
-                    "url('/heroImage.jpg')", // put your background image in public folder
+                    "url('/3.png')", // put your background image in public folder
             }}
         >
             {/* Transparent Overlay */}

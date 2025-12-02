@@ -5,12 +5,12 @@ import Image from "next/image";
 
 export default function Hero() {
     return (
-        <section className="relative pt-[240px] pb-10 w-full min-h-screen flex items-center justify-center overflow-hidden">
+        <section className="relative mt-[90px] pt-20 pb-10 w-full min-h-screen flex items-center justify-center overflow-hidden">
 
             {/* BACKGROUND IMAGE FIXED & CENTERED */}
             <div className="absolute inset-0">
                 <Image
-                    src="/heroImage.jpg"
+                    src="/1.png"
                     alt="Hospital Background"
                     fill
                     className="object-cover overflow-hidden object-center brightness-[0.85]"
@@ -18,7 +18,7 @@ export default function Hero() {
                 />
             </div>
 
-            <div className="relative w-full flex flex-col-reverse md:flex-row max-w-7xl mx-auto px-4 sm:px-6 md:px-10 gap-14 md:gap-20">
+            <div className="relative items-center w-full flex flex-col-reverse md:flex-row max-w-7xl mx-auto px-4 sm:px-6 md:px-10 gap-14 md:gap-20">
 
                 {/* LEFT BOX (FORM) */}
                 <motion.div
@@ -63,7 +63,7 @@ export default function Hero() {
                         <div className="mt-8 flex flex-col sm:flex-row gap-4">
                             <button
                                 type="submit"
-                                className="w-full sm:w-auto px-8 py-3 bg-blue-600 hover:bg-blue-700 text-white font-semibold rounded-xl shadow-lg shadow-blue-900/30 transition-all"
+                                className="w-full cursor-pointer sm:w-auto px-8 py-3 bg-blue-600 hover:bg-blue-700 text-white font-semibold rounded-xl shadow-lg shadow-blue-900/30 transition-all"
                             >
                                 Submit Now
                             </button>
@@ -91,7 +91,7 @@ export default function Hero() {
                         whileInView={{ opacity: 1, x: 0 }}
                         transition={{ duration: 0.8, ease: "easeOut", delay: 0.1 }}
                         viewport={{ once: true }}
-                        className="text-[40px] sm:text-[35px] md:text-[50px] lg:text-[58px] font-extrabold leading-tight mb-6 text-white"
+                        className="text-[40px] sm:text-[35px] md:text-[50px] lg:text-[68px] font-extrabold leading-tight mb-6 text-white"
                     >
                         DOCTOR & NURSE <span className=" font-extrabold">
                             HOME

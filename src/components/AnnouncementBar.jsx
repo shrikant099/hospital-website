@@ -42,7 +42,7 @@ export default function AnnouncementBar() {
               href="mailto:shrikantsoni809@gmail.com"
               className="font-medium text-gray-700 text-[10px] sm:text-xs md:text-sm truncate max-w-[120px] sm:max-w-none"
             >
-              shrikantsoni809@gmail.com
+              quickhomedoctor@gmail.com
             </a>
           </div>
         </div>

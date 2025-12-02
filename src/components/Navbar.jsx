@@ -93,11 +93,11 @@ export default function Navbar() {
               <motion.div
                 whileHover={{ scale: 1.08 }}
                 transition={{ type: "spring", stiffness: 250 }}
-                className="relative mt-1 w-[50px] h-[50px] rounded sm:w-11 sm:h-11 md:w-14 md:h-14 bg-white rounded-lg sm:rounded-xl flex items-center justify-center shadow-md border border-gray-100"
+                className="relative mr-2 mt-1 w-[50px] h-[50px] rounded sm:w-11 sm:h-11 md:w-14 md:h-14 bg-white rounded-lg sm:rounded-xl flex items-center justify-center shadow-md border border-gray-100"
               >
                 <img
                   src="/logo.png"
-                  className="w-full h-full object-contain"
+                  className="w-[40px] h-[40px] object-contain"
                   alt="QuickHomeDoctor Logo"
                 />
               </motion.div>
