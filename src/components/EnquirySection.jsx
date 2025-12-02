@@ -47,7 +47,10 @@ export default function EnquirySection() {
                         initial={{ opacity: 0 }}
                         animate={{ opacity: 1 }}
                         exit={{ opacity: 0 }}
-                        className="fixed inset-0 bg-black/40 backdrop-blur-sm flex items-center justify-center z-50 p-4"
+                        className="
+                            fixed inset-0 bg-black/40 backdrop-blur-sm 
+                            flex items-center justify-center z-50 p-4
+                        "
                     >
                         {/* MODAL BOX */}
                         <motion.div
@@ -56,10 +59,14 @@ export default function EnquirySection() {
                             exit={{ scale: 0.8, opacity: 0, y: 50 }}
                             transition={{ duration: 0.3 }}
                             className="
-                                bg-white w-full 
-                                max-w-md rounded-2xl 
-                                shadow-xl p-6 sm:p-8 
-                                relative
+                                bg-white 
+                                w-[95%]           /* ← mobile perfect */
+                                max-w-sm          /* ← prevents overflow */
+                                rounded-2xl 
+                                shadow-xl 
+                                p-6 sm:p-8 
+                                relative 
+                                overflow-hidden   /* ← fixes dropdown overflow */
                             "
                         >
                             {/* CLOSE BTN */}
