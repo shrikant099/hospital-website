@@ -134,7 +134,7 @@ export default function Footer() {
 
                             <li className="flex items-center gap-2 hover:text-[#0f706b] transition">
                                 <FiChevronRight size={16} />
-                                <Link href="/home-visit">Home Visit</Link>
+                                <Link href="/home-visits/delhi">Home Visit</Link>
                             </li>
 
                             <li className="flex items-center gap-2 hover:text-[#0f706b] transition">

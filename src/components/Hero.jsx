@@ -124,10 +124,16 @@ export default function Hero() {
                                 type="tel"
                                 name="mobile"
                                 value={form.mobile}
-                                onChange={handleChange}
-                                placeholder="Enter number"
+                                onChange={(e) => {
+                                    // Only numbers + limit 10
+                                    const value = e.target.value.replace(/\D/g, "");
+                                    if (value.length <= 10) {
+                                        setForm({ ...form, mobile: value });
+                                    }
+                                }} placeholder="Enter number"
                                 className="w-full px-4 py-3 rounded-lg border bg-white/30 border-white/40 text-white placeholder-white/70"
                                 required
+                                maxLength={10}
                             />
                         </div>
 

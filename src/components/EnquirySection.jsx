@@ -3,7 +3,7 @@
 import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import emailjs from "@emailjs/browser";
-import { SERVICE_ID, PUBLIC_KEY, ENQUIRY_TEMPLATE_ID } from "@/constant";
+import { SERVICE_ID, PUBLIC_KEY, TEMPLATE_ID,  } from "@/constant";
 
 export default function EnquirySection() {
     const [open, setOpen] = useState(false);
@@ -30,7 +30,7 @@ export default function EnquirySection() {
         emailjs
             .send(
                 SERVICE_ID,
-                ENQUIRY_TEMPLATE_ID,
+                TEMPLATE_ID,
                 {
                     patient_name: form.name,
                     mobile: `${form.countryCode} ${form.mobile}`,
