@@ -3,12 +3,23 @@
 import { motion } from "framer-motion";
 import Image from "next/image";
 import { useState, useEffect } from "react";
+import emailjs from "@emailjs/browser";
+import { PUBLIC_KEY, SERVICE_ID, TEMPLATE_ID } from "@/constant";
 
 export default function Hero() {
     const cities = ["Delhi", "Gurugram", "Noida", "Ghaziabad"];
     const [cityIndex, setCityIndex] = useState(0);
     const [text, setText] = useState("");
     const [isDeleting, setIsDeleting] = useState(false);
+
+    const [form, setForm] = useState({
+        name: "",
+        mobile: "",
+        email: "",
+    });
+
+    const [loading, setLoading] = useState(false);
+    const [successMsg, setSuccessMsg] = useState("");
 
     useEffect(() => {
         let currentCity = cities[cityIndex];
@@ -21,12 +32,10 @@ export default function Hero() {
                     : currentCity.substring(0, prev.length + 1)
             );
 
-            // When city is fully typed
             if (!isDeleting && text === currentCity) {
-                setTimeout(() => setIsDeleting(true), 800); // hold before deleting
+                setTimeout(() => setIsDeleting(true), 800);
             }
 
-            // When city is fully deleted
             if (isDeleting && text === "") {
                 setIsDeleting(false);
                 setCityIndex((prev) => (prev + 1) % cities.length);
@@ -36,9 +45,40 @@ export default function Hero() {
         return () => clearTimeout(typing);
     }, [text, isDeleting, cityIndex]);
 
+    const handleChange = (e) => {
+        setForm({ ...form, [e.target.name]: e.target.value });
+    };
+
+    const handleSubmit = (e) => {
+        e.preventDefault();
+        setLoading(true);
+        setSuccessMsg("");
+
+        emailjs
+            .send(
+                SERVICE_ID,
+                TEMPLATE_ID,
+                {
+                    patient_name: form.name,
+                    mobile: form.mobile,
+                    email: form.email,
+                },
+                PUBLIC_KEY
+            )
+            .then(() => {
+                setLoading(false);
+                setSuccessMsg("Appointment Request Sent Successfully!");
+                setForm({ name: "", mobile: "", email: "" });
+            })
+            .catch((err) => {
+                setLoading(false);
+                alert("Failed to send. Please try again.");
+                console.log(err);
+            });
+    };
+
     return (
         <section className="relative mt-[90px] pt-20 pb-10 w-full min-h-screen flex items-center justify-center overflow-hidden">
-
             {/* BACKGROUND IMAGE */}
             <div className="absolute inset-0">
                 <Image
@@ -64,22 +104,30 @@ export default function Hero() {
                         Schedule an Appointment
                     </h2>
 
-                    <form className="space-y-5">
+                    <form onSubmit={handleSubmit} className="space-y-5">
                         <div>
                             <label className="block mb-1 font-semibold">Patient Name</label>
                             <input
                                 type="text"
+                                name="name"
+                                value={form.name}
+                                onChange={handleChange}
                                 placeholder="Enter patient name"
                                 className="w-full px-4 py-3 rounded-lg border bg-white/30 border-white/40 text-white placeholder-white/70"
+                                required
                             />
                         </div>
 
                         <div>
                             <label className="block mb-1 font-semibold">Enter Mobile Number</label>
                             <input
-                                type="text"
+                                type="tel"
+                                name="mobile"
+                                value={form.mobile}
+                                onChange={handleChange}
                                 placeholder="Enter number"
                                 className="w-full px-4 py-3 rounded-lg border bg-white/30 border-white/40 text-white placeholder-white/70"
+                                required
                             />
                         </div>
 
@@ -87,17 +135,31 @@ export default function Hero() {
                             <label className="block mb-1 font-semibold">Enter Email</label>
                             <input
                                 type="email"
+                                name="email"
+                                value={form.email}
+                                onChange={handleChange}
                                 placeholder="Enter email"
                                 className="w-full px-4 py-3 rounded-lg border bg-white/30 border-white/40 text-white placeholder-white/70"
+                                required
                             />
                         </div>
+
+                        {/* SUCCESS MESSAGE */}
+                        {successMsg && (
+                            <p className="text-green-300 font-semibold">{successMsg}</p>
+                        )}
 
                         <div className="mt-8 flex flex-col sm:flex-row gap-4">
                             <button
                                 type="submit"
-                                className="w-full sm:w-auto px-8 py-3 bg-blue-600 hover:bg-blue-700 text-white font-semibold rounded-xl shadow-lg"
+                                disabled={loading}
+                                className="w-full sm:w-auto px-8 py-3 bg-blue-600 disabled:bg-blue-400 text-white font-semibold rounded-xl shadow-lg flex items-center justify-center gap-2"
                             >
-                                Submit Now
+                                {loading ? (
+                                    <div className="w-5 h-5 border-2 border-white border-t-transparent rounded-full animate-spin"></div>
+                                ) : (
+                                    "Submit Now"
+                                )}
                             </button>
 
                             <a
@@ -129,11 +191,11 @@ export default function Hero() {
                         VISIT IN{" "}
                         <span
                             className="
-                            font-extrabold
-                            text-[45px] sm:text-[55px] md:text-[65px]
-                            bg-gradient-to-r from-[#f5f5f5] via-[#f7f7f7] to-[#ede9ed8c]
-                            text-transparent bg-clip-text
-                        "
+                                font-extrabold
+                                text-[45px] sm:text-[55px] md:text-[65px]
+                                bg-gradient-to-r from-[#f5f5f5] via-[#f7f7f7] to-[#ede9ed8c]
+                                text-transparent bg-clip-text
+                            "
                         >
                             {text}
                             <span className="animate-pulse">|</span>
