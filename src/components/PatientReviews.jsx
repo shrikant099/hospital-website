@@ -88,7 +88,7 @@ export default function PatientReviews() {
                     >
                         {/* Google Logo */}
                         <div className="flex justify-center mb-4">
-                            {/* <img src="/google.png" alt="Google" className="w-10 opacity-90" /> */}
+                            <img src="/googleLogo.png" alt="Google" className="w-10 opacity-90" />
                         </div>
 
                         {/* Name */}
