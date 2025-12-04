@@ -39,7 +39,7 @@ export default function AnnouncementBar() {
           <div className="flex items-center gap-1.5 sm:gap-2">
             <Mail className="w-3 h-3 sm:w-4 sm:h-4 md:w-5 md:h-5 text-gray-600" />
             <a
-              href="mailto:shrikantsoni809@gmail.com"
+              href="mailto:quickhomedoctor@gmail.com"
               className="font-medium text-gray-700 text-[12px] sm:text-xs md:text-sm truncate max-w-[120px] sm:max-w-none"
             >
               quickhomedoctor@gmail.com
