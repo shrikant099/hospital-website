@@ -114,18 +114,18 @@ export default function DoctorsCarousel() {
                         "
                     >
                         {/* IMAGE */}
-                      {/* IMAGE */}
-<div className="w-full md:w-1/3 
+                        {/* IMAGE */}
+                        <div className="w-full md:w-1/3 
                 h-100 sm:h-100 md:h-80
                 relative flex-shrink-0">
 
-    <Image
-        src={current.img}
-        alt={current.name}
-        fill
-        className="object-cover object-top rounded-xl"
-    />
-</div>
+                            <Image
+                                src={current.img}
+                                alt={current.name}
+                                fill
+                                className="object-cover object-top rounded-xl"
+                            />
+                        </div>
 
                         {/* TEXT */}
                         <div className="md:w-2/3">
@@ -152,9 +152,8 @@ export default function DoctorsCarousel() {
                         <button
                             key={i}
                             onClick={() => setIndex(i)}
-                            className={`w-3 h-3 rounded-full transition ${
-                                i === index ? "bg-[#0a6664]" : "bg-gray-300"
-                            }`}
+                            className={`w-3 h-3 rounded-full transition ${i === index ? "bg-[#0a6664]" : "bg-gray-300"
+                                }`}
                         />
                     ))}
                 </div>

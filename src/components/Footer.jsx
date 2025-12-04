@@ -48,7 +48,9 @@ export default function Footer() {
                                 <FiPhone className="text-[#0f706b]" size={20} />
                             </div>
                             <span className="text-gray-700 text-sm group-hover:text-[#0f706b] transition">
-                                +91 7303771900
+                                <a href="tel:+917303771900">
+                                    +91 7303771900
+                                </a>
                             </span>
                         </div>
 
@@ -57,7 +59,11 @@ export default function Footer() {
                                 <FiMail className="text-[#0f706b]" size={20} />
                             </div>
                             <span className="text-gray-700 text-sm group-hover:text-[#0f706b] transition">
-                                demo@gmail.com
+                                <a
+                                    href="mailto:shrikantsoni809@gmail.com"
+                                >
+                                    quickhomedoctor@gmail.com
+                                </a>
                             </span>
                         </div>
                     </div>
@@ -85,8 +91,8 @@ export default function Footer() {
                             "Other Services"
                         ].map((item, i) => (
                             <Link
-                            key={i}
-                                href="/services"
+                                key={i}
+                                href="/services/other-services"
                                 className="flex items-center gap-2 hover:text-[#0f706b] transition cursor-pointer"
                             >
                                 <FiChevronRight size={16} />
