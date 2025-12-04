@@ -59,7 +59,7 @@ export default function EnquirySection() {
                             exit={{ scale: 0.8, opacity: 0, y: 50 }}
                             transition={{ duration: 0.3 }}
                             className="
-                                bg-white 
+                     bg-white 
                                 w-[95%]           /* ← mobile perfect */
                                 max-w-sm          /* ← prevents overflow */
                                 rounded-2xl 
@@ -83,7 +83,6 @@ export default function EnquirySection() {
 
                             {/* FORM */}
                             <form className="space-y-5">
-
                                 <div>
                                     <label className="text-sm font-semibold text-gray-600">
                                         Patient Name*
@@ -131,7 +130,6 @@ export default function EnquirySection() {
                                         />
                                     </div>
                                 </div>
-
 
                                 <div>
                                     <label className="text-sm font-semibold text-gray-600">

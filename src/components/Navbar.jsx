@@ -20,7 +20,7 @@ export default function Navbar() {
   }, []);
 
   const navItems = [
-    { name: "About", href: "/about" },
+    { name: "About Us", href: "/about" },
 
     {
       name: "Home Visits",
@@ -33,20 +33,15 @@ export default function Navbar() {
         { name: "Gajiabad", href: "/home-visits/gajiabad" },
       ],
     },
-
-
     { name: "Our Doctors", href: "/our-doctors" },
     {
       name: "Services",
       type: "services",
       subItems: [
         { name: "Home Care Services", href: "/services/home-care" },
-        {
-          name: "Critical Care / Specialized",
-          href: "/services/critical-care",
-        },
+        { name: "Critical Care / Specialized", href: "/services/critical-care" },
         { name: "Diagnostics & Monitoring", href: "/services/diagnostics" },
-        { name: "Other Services", href: "/services" },
+        { name: "Other Services", href: "/services/other-services" },
       ],
     },
     { name: "Privacy & Policy", href: "/privacy-policy" },
@@ -102,7 +97,7 @@ export default function Navbar() {
                 />
               </motion.div>
               <div>
-                <h1 className="text-gray-900 font-bold text-xs sm:text-sm md:text-xl leading-tight">
+                <h1 className="text-gray-900 text-xl font-bold sm:text-2xl md:text-2xl leading-tight">
                   QuickHomeDoctor
                 </h1>
                 <p className="text-gray-500 font-medium text-[8px] sm:text-[10px] md:text-xs leading-tight">

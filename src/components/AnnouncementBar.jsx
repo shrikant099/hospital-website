@@ -29,7 +29,7 @@ export default function AnnouncementBar() {
           {/* LEFT */}
           <div className="flex items-center gap-1.5 sm:gap-3">
             <Phone className="w-3 h-3 sm:w-4 sm:h-4 md:w-5 md:h-5 text-gray-600" />
-            <a href="tel:+917303771900" className="text-gray-800 font-semibold text-xs sm:text-sm md:text-base">
+            <a href="tel:+917303771900" className="text-gray-800 font-semibold text-lg sm:text-sm md:text-[23px]">
               +91 7303771900
             </a>
             <span className="hidden md:inline-block text-gray-500 text-sm">| 24/7 Emergency</span>
@@ -40,7 +40,7 @@ export default function AnnouncementBar() {
             <Mail className="w-3 h-3 sm:w-4 sm:h-4 md:w-5 md:h-5 text-gray-600" />
             <a
               href="mailto:shrikantsoni809@gmail.com"
-              className="font-medium text-gray-700 text-[10px] sm:text-xs md:text-sm truncate max-w-[120px] sm:max-w-none"
+              className="font-medium text-gray-700 text-[12px] sm:text-xs md:text-sm truncate max-w-[120px] sm:max-w-none"
             >
               quickhomedoctor@gmail.com
             </a>

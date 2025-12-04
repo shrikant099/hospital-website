@@ -39,7 +39,7 @@ export default function GoalsSection() {
             }}
         >
             {/* Transparent Overlay */}
-            <div className="absolute inset-0 bg-white/30 backdrop-blur-[2px]"></div>
+            <div className="absolute inset-0 bg-white/40 backdrop-blur-[5px]"></div>
 
             {/* Content */}
             <div className="relative max-w-7xl mx-auto px-5 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-10 text-center">
@@ -58,12 +58,12 @@ export default function GoalsSection() {
                         </div>
 
                         {/* Number */}
-                        <h3 className="text-4xl mt-5 font-extrabold text-[#0f706b]">
+                        <h3 className="text-4xl mt-5 font-extrabold text-[#212121]">
                             {item.number}
                         </h3>
 
                         {/* Label */}
-                        <p className="text-gray-700 font-medium mt-2">{item.label}</p>
+                        <p className="text-gray-900 text-xl font-extrabold font-medium mt-2">{item.label}</p>
                     </motion.div>
                 ))}
             </div>

@@ -81,7 +81,7 @@ export default function OurServices() {
                         </p>
 
                         {/* Read More */}
-                        <Link href="/services">
+                        <Link href="/services/home-care">
                             <div className="flex items-center justify-center gap-2 text-[#0a6664] font-semibold hover:gap-3 transition-all">
                                 Read More <FiArrowRight />
                             </div>

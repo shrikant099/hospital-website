@@ -7,9 +7,9 @@ import { FiChevronDown } from "react-icons/fi";
 
 export default function AboutQuickHomeDoctor() {
     const images = [
-        "/about/doctor1.jpg",
-        "/about/doctor2.jpg",
-        "/about/doctor3.jpg",
+        "/home-visits/home-visit-noida.png",
+        "/home-visits/home-visit-delhi-ncr.jpg",
+        "/img2.png",
     ];
 
     const [index, setIndex] = useState(0);

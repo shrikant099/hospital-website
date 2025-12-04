@@ -85,6 +85,7 @@ export default function Footer() {
                             "Other Services"
                         ].map((item, i) => (
                             <Link
+                            key={i}
                                 href="/services"
                                 className="flex items-center gap-2 hover:text-[#0f706b] transition cursor-pointer"
                             >
@@ -132,7 +133,7 @@ export default function Footer() {
 
                             <li className="flex items-center gap-2 hover:text-[#0f706b] transition">
                                 <FiChevronRight size={16} />
-                                <Link href="/services">Services</Link>
+                                <Link href="/services/home-care">Services</Link>
                             </li>
 
                             <li className="flex items-center gap-2 hover:text-[#0f706b] transition">
