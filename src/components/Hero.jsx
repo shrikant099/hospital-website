@@ -85,7 +85,7 @@ export default function Hero() {
                     src="/1.png"
                     alt="Hospital Background"
                     fill
-                    className="object-cover object-center brightness-[0.45]"
+                    className="object-cover object-center brightness-[0.62]"
                     priority
                 />
             </div>
@@ -198,7 +198,7 @@ export default function Hero() {
                         <span
                             className="
                            font-extrabold
-                           text-[21px] sm:text-[22px] md:text-[28px] lg:text-[32px]
+                           text-[21px] sm:text-[22px] md:text-[28px] lg:text-[39px]
                            bg-gradient-to-r from-[#f5f5f5] via-[#f7f7f7] to-[#ede9ed8c]
                            text-transparent bg-clip-text
                        "
