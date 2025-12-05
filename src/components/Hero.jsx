@@ -209,7 +209,7 @@ export default function Hero() {
                         </span>
                     </motion.h1>
 
-                    <ul className="space-y-4 text-base sm:text-lg md:text-xl text-gray-200">
+                    <ul className="space-y-1 text-base sm:text-lg md:text-xl text-gray-200">
                         <motion.li className="flex gap-3 justify-center md:justify-start font-bold">
                             <span className="text-white text-2xl">•</span>
                             GP & MD Doctor Consultation
