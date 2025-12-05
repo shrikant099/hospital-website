@@ -191,17 +191,18 @@ export default function Hero() {
                         whileInView={{ opacity: 1, x: 0 }}
                         transition={{ duration: 0.8, delay: 0.1 }}
                         viewport={{ once: true }}
-                        className="text-[40px] sm:text-[35px] md:text-[50px] lg:text-[68px] font-extrabold leading-tight mb-6"
+                        className="text-[22px] sm:text-[30px] md:text-[28px] lg:text-[39px] font-extrabold leading-tight mb-6"
                     >
                         DOCTOR & NURSE <span className=" font-extrabold">HOME</span> <br />
                         VISIT IN{" "}
                         <span
                             className="
-                                font-extrabold
-                                text-[45px] sm:text-[55px] md:text-[65px]
-                                bg-gradient-to-r from-[#f5f5f5] via-[#f7f7f7] to-[#ede9ed8c]
-                                text-transparent bg-clip-text
-                            "
+                           font-extrabold
+                           text-[21px] sm:text-[22px] md:text-[28px] lg:text-[32px]
+                           bg-gradient-to-r from-[#f5f5f5] via-[#f7f7f7] to-[#ede9ed8c]
+                           text-transparent bg-clip-text
+                       "
+
                         >
                             {text}
                             <span className="animate-pulse">|</span>
