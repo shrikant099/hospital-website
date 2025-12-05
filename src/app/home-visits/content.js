@@ -47,9 +47,9 @@ export const cityContent = {
             "/home-visits/home-visit-noida.png",
     },
 
-    gajiabad: {
+    ghaziabad: {
         title: "DOCTOR & NURSE HOME VISIT",
-        city: "GAJIABAD",
+        city: "GHAZIABAD",
         bulletPoints: [
             "Home Doctor Visit in 30 Minutes",
             "Top Home Healthcare Service",

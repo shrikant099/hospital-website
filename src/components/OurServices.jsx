@@ -62,7 +62,7 @@ export default function OurServices() {
                         <div
                             className={`absolute top-0 left-0 w-20 h-20 ${s.topIconBg}`}
                             style={{
-                                clipPath: "polygon(0 0, 100% 0, 0 100%)",
+                                clipPath: "polygon(0 0px, 245% 0, 0 100%)",
                             }}
                         ></div>
 

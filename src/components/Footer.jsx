@@ -60,7 +60,7 @@ export default function Footer() {
                             </div>
                             <span className="text-gray-700 text-sm group-hover:text-[#0f706b] transition">
                                 <a
-                                    href="mailto:shrikantsoni809@gmail.com"
+                                    href="mailto:quickhomedoctor@gmail.com"
                                 >
                                     quickhomedoctor@gmail.com
                                 </a>

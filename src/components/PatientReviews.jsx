@@ -87,9 +87,9 @@ export default function PatientReviews() {
                         className="text-center"
                     >
                         {/* Google Logo */}
-                        <div className="flex justify-center mb-4">
+                        {/* <div className="flex justify-center mb-4">
                             <img src="/googleLogo.png" alt="Google" className="w-10 opacity-90" />
-                        </div>
+                        </div> */}
 
                         {/* Name */}
                         <p className="text-gray-700 font-semibold text-lg mb-2">

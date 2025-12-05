@@ -32,7 +32,7 @@ const doctors = [
         name: "Dr. Sabiya Ansari",
         img: "/doctors/Dr-sabiya-ansari.png",
         degree: "MBBS (KGMU) — DMC (Delhi Medical Council)",
-        exp: "",
+        exp: "8 year Experience VC, IRP , JR, Emergency",
         details: [
             "IRP - Hindu Rao Hospital Delhi, North BMC",
             "BMC Medical College Delhi",
@@ -45,7 +45,7 @@ const doctors = [
         name: "Dr. Anuj Mishra",
         img: "/doctors/Dr-anuj-mishra.png",
         degree: "MBBS (VSMU Belarus)",
-        exp: "",
+        exp: "10 year Experience JREM, IRP, Emergency",
         details: [
             "JREM - AIIMS New Delhi",
             "IRP - Hindu Rao Hospital New Delhi",
@@ -57,7 +57,7 @@ const doctors = [
         name: "Dr. Monika Kajla",
         img: "/doctors/Dr-monika-kajla.png",
         degree: "MBBS (KGMU, KZK) RMC-64653",
-        exp: "",
+        exp: "8 year Experience CMO, IRP, Emergency",
         details: [
             "CMO - Balaji Action Cancer Hospital Delhi",
             "IRP - GMCH Udaipur",
@@ -68,7 +68,7 @@ const doctors = [
         name: "Dr. Chitranshu Trivedi",
         img: "/doctors/dr-chitranshu-trivedi.png",
         degree: "MBBS (RIMRI, MJPR) Bareilly",
-        exp: "",
+        exp: "11 year Experience OPD, ER, IPD, Emergency",
         details: [
             "CMO - Balaji Action Cancer Hospital, Delhi",
             "NAJR - BLK Max Delhi (Urology)",
@@ -98,22 +98,22 @@ export default function DoctorsSection() {
                         whileInView={{ opacity: 1, y: 0 }}
                         transition={{ duration: 0.5, delay: i * 0.15 }}
                         whileHover={{ scale: 1.04 }}
-                        className="relative bg-white/90 rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl transition-all border border-gray-200"
+                        className="relative bg-white/90 rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl transition-all border border-gray-200 flex flex-col"
                     >
 
-                        {/* BIGGER / PERFECT IMAGE FIX */}
-                        <div className="relative w-full h-72 sm:h-80 md:h-72 lg:h-80 xl:h-72 overflow-hidden">
+                        {/* FIXED LARGE IMAGE */}
+                        <div className="relative w-full h-[580px] sm:h-[430px] md:h-[440px] lg:h-[460px] xl:h-[480px] overflow-hidden">
                             <Image
                                 src={doc.img}
                                 alt={doc.name}
                                 fill
-                                className="object-cover object-center md:object-top"
+                                className="object-cover object-top"
                                 priority
                             />
                         </div>
 
                         {/* TEXT CONTENT */}
-                        <div className="p-6">
+                        <div className="p-6 flex-grow">
                             <h3 className="text-xl font-bold text-blue-900">{doc.name}</h3>
 
                             <p className="text-sm text-gray-500 mt-1">{doc.degree}</p>
@@ -130,6 +130,7 @@ export default function DoctorsSection() {
                                 ))}
                             </ul>
                         </div>
+
                     </motion.div>
                 ))}
             </div>

@@ -30,7 +30,7 @@ export default function Navbar() {
         { name: "Delhi NCR", href: "/home-visits/delhiNcr" },
         { name: "Gurugram", href: "/home-visits/gurugram" },
         { name: "Noida", href: "/home-visits/noida" },
-        { name: "Gajiabad", href: "/home-visits/gajiabad" },
+        { name: "Ghaziabad", href: "/home-visits/ghaziabad" },
       ],
     },
     { name: "Our Doctors", href: "/our-doctors" },

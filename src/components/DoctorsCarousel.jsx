@@ -33,7 +33,7 @@ const doctors = [
         name: "Dr. Sabiya Ansari",
         img: "/doctors/Dr-sabiya-ansari.png",
         degree: "MBBS (KGMU) — DMC (Delhi Medical Council)",
-        exp: "",
+        exp: "8 year Experience VC, IRP , JR, Emergency",
         details: [
             "IRP - Hindu Rao Hospital Delhi, North BMC",
             "BMC Medical College Delhi",
@@ -46,7 +46,7 @@ const doctors = [
         name: "Dr. Anuj Mishra",
         img: "/doctors/Dr-anuj-mishra.png",
         degree: "MBBS (VSMU Belarus)",
-        exp: "",
+        exp: "10 year Experience JREM, IRP, Emergency",
         details: [
             "JREM - AIIMS New Delhi",
             "IRP - Hindu Rao Hospital New Delhi",
@@ -58,7 +58,7 @@ const doctors = [
         name: "Dr. Monika Kajla",
         img: "/doctors/Dr-monika-kajla.png",
         degree: "MBBS (KGMU, KZK) RMC-64653",
-        exp: "",
+        exp: "8 year Experience CMO, IRP, Emergency",
         details: [
             "CMO - Balaji Action Cancer Hospital Delhi",
             "IRP - GMCH Udaipur",
@@ -69,7 +69,7 @@ const doctors = [
         name: "Dr. Chitranshu Trivedi",
         img: "/doctors/dr-chitranshu-trivedi.png",
         degree: "MBBS (RIMRI, MJPR) Bareilly",
-        exp: "",
+        exp: "11 year Experience OPD, ER, IPD, Emergency",
         details: [
             "CMO - Balaji Action Cancer Hospital, Delhi",
             "NAJR - BLK Max Delhi (Urology)",
@@ -113,12 +113,16 @@ export default function DoctorsCarousel() {
                             p-6 md:p-10 flex flex-col md:flex-row gap-8
                         "
                     >
-                        {/* IMAGE */}
-                        {/* IMAGE */}
-                        <div className="w-full md:w-1/3 
-                h-100 sm:h-100 md:h-80
-                relative flex-shrink-0">
 
+                        {/* DOCTOR IMAGE */}
+                        <div
+                            className="
+                                relative w-full md:w-1/3 
+                                h-[470px] sm:h-[6   80px]
+                                md:h-90 lg:h-95 xl:h-80
+                                flex-shrink-0 overflow-hidden
+                            "
+                        >
                             <Image
                                 src={current.img}
                                 alt={current.name}
@@ -127,15 +131,22 @@ export default function DoctorsCarousel() {
                             />
                         </div>
 
-                        {/* TEXT */}
+                        {/* TEXT CONTENT */}
                         <div className="md:w-2/3">
                             <h3 className="text-2xl font-bold text-[#005f5e]">
                                 {current.name}
                             </h3>
+
                             <p className="text-[#0a6664] font-semibold mt-1">
                                 {current.degree}
                             </p>
-                            <p className="text-gray-600 mt-1">{current.exp}</p>
+
+                            {/* EXPERIENCE ADDED */}
+                            {current.exp && (
+                                <p className="text-sm text-green-600 font-semibold mt-2">
+                                    {current.exp}
+                                </p>
+                            )}
 
                             <ul className="mt-4 text-gray-700 space-y-1">
                                 {current.details.map((d, idx) => (
@@ -143,17 +154,19 @@ export default function DoctorsCarousel() {
                                 ))}
                             </ul>
                         </div>
+
                     </motion.div>
                 </AnimatePresence>
 
-                {/* DOT INDICATORS */}
+                {/* DOTS */}
                 <div className="flex justify-center mt-6 gap-3">
                     {doctors.map((_, i) => (
                         <button
                             key={i}
                             onClick={() => setIndex(i)}
-                            className={`w-3 h-3 rounded-full transition ${i === index ? "bg-[#0a6664]" : "bg-gray-300"
-                                }`}
+                            className={`w-3 h-3 rounded-full transition ${
+                                i === index ? "bg-[#0a6664]" : "bg-gray-300"
+                            }`}
                         />
                     ))}
                 </div>
