@@ -52,7 +52,7 @@ export default function LatestBlogs() {
           initial="hidden"
           whileInView="show"
           viewport={{ once: true }}
-           className="text-center mb-14"
+          className="text-center mb-14"
         >
           <h2 className="text-3xl md:text-4xl font-extrabold text-[#0a6664] tracking-wide">
             LATEST BLOG POSTS
@@ -79,7 +79,7 @@ export default function LatestBlogs() {
               {/* IMAGE */}
               <div className="relative w-full h-56">
                 <Image
-                quality={70}
+                  quality={70}
                   src={blog.image}
                   alt={blog.title}
                   fill
