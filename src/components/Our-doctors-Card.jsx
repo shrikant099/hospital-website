@@ -107,6 +107,7 @@ export default function DoctorsSection() {
                                 src={doc.img}
                                 alt={doc.name}
                                 fill
+                                quality={70}
                                 className="object-cover object-top"
                                 priority
                             />

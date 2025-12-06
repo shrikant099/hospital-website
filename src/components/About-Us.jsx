@@ -57,6 +57,7 @@ export default function AboutSection() {
                     src="/2.png"
                     alt="About QuickHomeDoctor"
                     fill
+                    quality={70}
                     className="brightness-[0.55] object-cover"
                 />
 

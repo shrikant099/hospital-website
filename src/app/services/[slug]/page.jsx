@@ -86,6 +86,7 @@ export default function ServicePage() {
         <Image
           src={service.heroImage}
           fill
+          quality={70}
           alt={service.title}
           className="object-cover brightness-[0.45]"
         />
@@ -139,6 +140,7 @@ export default function ServicePage() {
             <Image
               src={service.sectionImage}
               width={650}
+              quality={70}
               height={450}
               className="rounded-2xl shadow-xl object-cover"
               alt="service section"

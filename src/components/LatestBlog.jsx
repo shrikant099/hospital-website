@@ -79,6 +79,7 @@ export default function LatestBlogs() {
               {/* IMAGE */}
               <div className="relative w-full h-56">
                 <Image
+                quality={70}
                   src={blog.image}
                   alt={blog.title}
                   fill

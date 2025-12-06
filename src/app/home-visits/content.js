@@ -8,7 +8,7 @@ export const cityContent = {
             "Personalized Care",
         ],
         image:
-            "/img2.png", // unsplash image
+            "/img2.png", 
     },
 
     delhiNcr: {
@@ -20,7 +20,7 @@ export const cityContent = {
             "Expert Qualified Doctors",
         ],
         image:
-            "/home-visits/home-visit-delhi-ncr.jpg",
+            "/home-visits/home-visit-delhi-ncr.png",
     },
 
     gurugram: {

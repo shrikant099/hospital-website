@@ -97,9 +97,9 @@ export default function Navbar() {
                 />
               </motion.div>
               <div>
-                <h1 className="text-gray-900 text-xl font-bold sm:text-2xl md:text-2xl leading-tight">
+                <h2 className="text-gray-900 text-xl font-bold sm:text-2xl md:text-2xl leading-tight">
                   QuickHomeDoctor
-                </h1>
+                </h2>
                 <p className="text-gray-500 font-medium text-[8px] sm:text-[10px] md:text-xs leading-tight">
                   Expert doctor at home in 15 min
                 </p>

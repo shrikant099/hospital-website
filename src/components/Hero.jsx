@@ -85,6 +85,7 @@ export default function Hero() {
                     src="/1.png"
                     alt="Hospital Background"
                     fill
+                    quality={70}
                     className="object-cover object-center brightness-[0.62]"
                     priority
                 />

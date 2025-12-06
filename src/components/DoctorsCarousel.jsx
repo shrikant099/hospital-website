@@ -127,6 +127,7 @@ export default function DoctorsCarousel() {
                                 src={current.img}
                                 alt={current.name}
                                 fill
+                                quality={70}
                                 className="object-cover object-top rounded-xl"
                             />
                         </div>

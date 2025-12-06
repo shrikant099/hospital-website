@@ -8,7 +8,7 @@ import { FiChevronDown } from "react-icons/fi";
 export default function AboutQuickHomeDoctor() {
     const images = [
         "/home-visits/home-visit-noida.png",
-        "/home-visits/home-visit-delhi-ncr.jpg",
+        "/home-visits/home-visit-delhi-ncr.png",
         "/img2.png",
     ];
 
@@ -141,6 +141,7 @@ export default function AboutQuickHomeDoctor() {
                                 src={images[index]}
                                 alt="Doctor Team"
                                 fill
+                                quality={70}
                                 className="object-cover"
                             />
                         </motion.div>

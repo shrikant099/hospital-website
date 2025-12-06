@@ -215,6 +215,7 @@ export default function BookAppointment() {
                         <Image
                             src="/img2.png"
                             alt="Doctor"
+                            quality={70}
                             width={200}
                             height={200}
                             className="object-cover h-full"

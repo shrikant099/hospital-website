@@ -40,6 +40,7 @@ export default function CityPage() {
     <Image
       src={data.image}
       alt={data.city}
+      quality={70}
       fill
       priority
       className="object-cover object-right brightness-95"
@@ -103,6 +104,7 @@ export default function CityPage() {
     <Image
       src={data.image}
       fill
+      quality={70}
       alt={data.city}
       className="object-cover object-center brightness-90"
     />
@@ -115,11 +117,11 @@ export default function CityPage() {
     transition={{ duration: 0.7 }}
     className="p-6 bg-white/95 shadow-xl rounded-2xl mx-4 -mt-12 relative z-10"
   >
-    <h1 className="text-3xl font-extrabold text-[#005f5e] leading-snug text-center">
+    <h2 className="text-3xl font-extrabold text-[#005f5e] leading-snug text-center">
       {data.title}
       <br />
       IN {data.city}
-    </h1>
+    </h2>
 
     <ul className="mt-5 space-y-2 text-gray-700 font-medium">
       {data.bulletPoints.map((item, i) => (
