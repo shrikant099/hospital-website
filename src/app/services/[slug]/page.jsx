@@ -31,7 +31,7 @@ attendants for convenient home-based medical care.
   "critical-care": {
     title: "Critical Care Services",
     heroImage:
-      "https://images.unsplash.com/photo-1758691463110-697a814b2033?w=900&auto=format&fit=crop&q=80",
+      "/img3.png",
     description: `
 Quickhomedoctor provides ICU-level and specialized critical care 
 directly at your home to support safer and faster recovery.
