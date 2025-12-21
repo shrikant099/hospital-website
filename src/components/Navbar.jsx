@@ -27,7 +27,7 @@ export default function Navbar() {
       type: "home",
       subItems: [
         { name: "Delhi", href: "/home-visits/delhi" },
-        { name: "Delhi NCR", href: "/home-visits/delhiNcr" },
+        { name: "Delhi NCR", href: "/home-visits/delhi-ncr" },
         { name: "Gurugram", href: "/home-visits/gurugram" },
         { name: "Noida", href: "/home-visits/noida" },
         { name: "Ghaziabad", href: "/home-visits/ghaziabad" },

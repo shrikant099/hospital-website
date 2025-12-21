@@ -82,9 +82,9 @@ const doctors = [
 export default function DoctorsSection() {
     return (
         <section className="py-20 px-6 mt-20 bg-gradient-to-b from-blue-50 to-white">
-            <h2 className="text-4xl text-center font-extrabold text-blue-900">
+            <h1 className="text-4xl text-center font-extrabold text-blue-900">
                 Meet Our Doctors
-            </h2>
+            </h1>
 
             <p className="text-center mt-3 text-gray-600 max-w-2xl mx-auto">
                 Highly qualified & trusted medical experts available for top-quality home care.

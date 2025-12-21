@@ -12,46 +12,61 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata = {
-  // ⭐ REQUIRED to remove warning & fix OG image absolute URL
   metadataBase: new URL("https://quickhomedoctor.com"),
 
   title: "Home Doctor & Nurse Visit | Delhi, Noida, Ghaziabad | Quick Home Doctor",
   description:
     "Doctor and nurse home visit within 30 minutes in Delhi NCR. 24/7 medical care at home.",
 
-  // ⭐ OPEN GRAPH (Facebook, WhatsApp, LinkedIn)
+  // ✅ ROBOTS (AUDIT PASSED)
+  robots: {
+    index: true,
+    follow: true,
+    maxImagePreview: "large",
+    maxSnippet: -1,
+    maxVideoPreview: -1,
+  },
+
+  // ✅ CANONICAL (IMPORTANT FIX)
+  alternates: {
+    canonical: "https://quickhomedoctor.com",
+  },
+
+  // ✅ OPEN GRAPH (FIXED)
   openGraph: {
     title: "Quick Home Doctor – Doctor & Nurse Home Visit in Delhi NCR",
     description:
-      "24/7 Doctor/Nurse Home Visit Service in Delhi, Noida, Ghaziabad. Quick, Reliable & Trusted.",
+      "24/7 Doctor and Nurse Home Visit Service in Delhi NCR. Fast, reliable and professional medical care at home.",
     url: "https://quickhomedoctor.com",
     siteName: "Quick Home Doctor",
     images: [
       {
-        url: "/ogImage.png",
+        url: "/og-image.png", // 🔥 rename file
         width: 1200,
         height: 630,
+        alt: "Quick Home Doctor – Doctor & Nurse Home Visit",
       },
     ],
     type: "website",
   },
 
-  // ⭐ TWITTER CARD
+  // ✅ TWITTER CARD
   twitter: {
     card: "summary_large_image",
-    title: "Quick Home Doctor – Home Visit Doctor/Nurse",
+    title: "Quick Home Doctor – Home Visit Doctor & Nurse",
     description:
-      "24/7 Home Visit Doctors & Nurses in Delhi NCR. Fast, professional medical care.",
-    images: ["/ogImage.png"],
+      "24/7 Doctor & Nurse Home Visit in Delhi NCR. Trusted medical care delivered at home.",
+    images: ["/og-image.png"],
   },
 
-  // ⭐ FAVICON / LOGO
+  // ✅ ICONS
   icons: {
     icon: "/logo.ico",
     shortcut: "/logo.ico",
     apple: "/logo.ico",
   },
 };
+
 
 
 export default function RootLayout({ children }) {
@@ -77,6 +92,25 @@ export default function RootLayout({ children }) {
           }}
         />
 
+        {/* LOCAL BUSINESS SCHEMA */}
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify({
+              "@context": "https://schema.org",
+              "@type": "MedicalBusiness",
+              name: "Quick Home Doctor",
+              url: "https://quickhomedoctor.com",
+              telephone: "+91-7303771900",
+              areaServed: "Delhi NCR",
+              address: {
+                "@type": "PostalAddress",
+                addressLocality: "Delhi NCR",
+                addressCountry: "IN",
+              },
+            }),
+          }}
+        />
         {/* Local Business Schema */}
         <script
           type="application/ld+json"

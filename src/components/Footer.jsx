@@ -67,7 +67,15 @@ export default function Footer() {
                             </span>
                         </div>
                     </div>
+                {/* ADDRESS (SEO FIX) */}
+                <h2 className="mt-6 font-bold">Address</h2>
+                <address className="mt-5 text-sm text-gray-600 not-italic leading-relaxed">
+                    <strong>Quick Home Doctor</strong><br />
+                    Home Healthcare Services<br />
+                    Serving Delhi NCR, India
+                </address>
                 </motion.div>
+
 
                 {/* SERVICES */}
                 <motion.div
@@ -150,6 +158,14 @@ export default function Footer() {
                             <li className="flex items-center gap-2 hover:text-[#0f706b] transition">
                                 <FiChevronRight size={16} />
                                 <Link href="/privacy-policy">Privacy Policy</Link>
+                            </li>
+                            <li className="flex items-center gap-2 hover:text-[#0f706b] transition">
+                                <FiChevronRight size={16} />
+                                <Link href="/contact-us">Contact Us</Link>
+                            </li>
+                            <li className="flex items-center gap-2 hover:text-[#0f706b] transition">
+                                <FiChevronRight size={16} />
+                                <Link href="/terms-and-conditions">Terms & Conditions </Link>
                             </li>
 
                         </ul>

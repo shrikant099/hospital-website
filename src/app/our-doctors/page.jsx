@@ -6,6 +6,11 @@ import LatestBlogs from '@/components/LatestBlog'
 import Navbar from '@/components/Navbar'
 import DoctorsSection from '@/components/Our-doctors-Card'
 import React from 'react'
+export const metadata = {
+    title: "Our Doctors | Experienced Home Visit Doctors in Delhi NCR",
+    description:
+        "Meet our experienced and certified doctors providing trusted home visit medical care across Delhi NCR.",
+};
 
 const page = () => {
     return (

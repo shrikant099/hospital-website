@@ -1,0 +1,75 @@
+export const doctors = [
+    {
+        name: "Dr. Mahendra Mandiya",
+        img: "/doctors/Dr-mahendra-mandiya.png",
+        degree: "MBBS (MGMCH) DMC-87872",
+        exp: "10 year Experience OPD, IPD, Emergency",
+        details: [
+            "CMO (Ex.) Medanta Hospital Gurugram",
+            "Consultant (visiting) - Balaji Action Cancer Hospital Delhi",
+            "MD - Pulse Clinic and Vjmandia Pvt Ltd",
+            "Medical Officer (Ex.) - Raj govt NRHM",
+        ],
+    },
+    {
+        name: "Dr. Vijay Meena",
+        img: "/doctors/Dr-vijay-meena.png",
+        exp: "11 Years Experience OPD , IPD , Emergency",
+        degree: "MBBS (GGSMCH) DMC-93176",
+        details: [
+            "Consultant (visiting)-Balaji action cancer hospital delhi",
+            "EX CMO (Maharaja Agrasen Hospital)",
+            "MD - Pulse Clinics and VJMandia Pvt Ltd",
+            "Medical officer(Ex) - Raj Govt",
+        ],
+    },
+    {
+        name: "Dr. Sabiya Ansari",
+        img: "/doctors/Dr-sabiya-ansari.png",
+        degree: "MBBS (KGMU) — DMC (Delhi Medical Council)",
+        exp: "8 year Experience VC, IRP , JR, Emergency",
+        details: [
+            "IRP - Hindu Rao Hospital Delhi, North BMC",
+            "BMC Medical College Delhi",
+            "JR - Baba Saheb Ambedkar Hospital Delhi",
+            "VC - Action Cancer Hospital Delhi",
+            "RMO - Sant Parmanand Hospital New Delhi",
+        ],
+    },
+    {
+        name: "Dr. Anuj Mishra",
+        img: "/doctors/Dr-anuj-mishra.png",
+        degree: "MBBS (VSMU Belarus)",
+        exp: "10 year Experience JREM, IRP, Emergency",
+        details: [
+            "JREM - AIIMS New Delhi",
+            "IRP - Hindu Rao Hospital New Delhi",
+            "JREM - Safdarjung Hospital and VMMC",
+            "DMC (Delhi Medical Council)",
+        ],
+    },
+    {
+        name: "Dr. Monika Kajla",
+        img: "/doctors/Dr-monika-kajla.png",
+        degree: "MBBS (KGMU, KZK) RMC-64653",
+        exp: "8 year Experience CMO, IRP, Emergency",
+        details: [
+            "CMO - Balaji Action Cancer Hospital Delhi",
+            "IRP - GMCH Udaipur",
+            "FMG - NMC Delhi",
+        ],
+    },
+    {
+        name: "Dr. Chitranshu Trivedi",
+        img: "/doctors/dr-chitranshu-trivedi.png",
+        degree: "MBBS (RIMRI, MJPR) Bareilly",
+        exp: "11 year Experience OPD, ER, IPD, Emergency",
+        details: [
+            "CMO - Balaji Action Cancer Hospital, Delhi",
+            "NAJR - BLK Max Delhi (Urology)",
+            "DMC - 118234",
+            "Visiting Consultant - Pulse & VJMandia Pvt. Ltd",
+            "Experience: OPD, IPD, ER",
+        ],
+    },
+];
