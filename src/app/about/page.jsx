@@ -12,8 +12,8 @@ export const metadata = {
   description:
     "Learn about Quick Home Doctor, our mission, and our team providing trusted doctor and nurse home visit services across Delhi NCR with quality medical care at home.",
   alternates: {
-    canonical: "https://quickhomedoctor.com/about-us",
-    
+    canonical: "https://quickhomedoctor.com/about",
+
   },
 };
 const page = () => {
