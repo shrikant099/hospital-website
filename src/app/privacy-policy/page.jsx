@@ -9,6 +9,7 @@ export const metadata = {
         "Read how Quick Home Doctor protects your personal and medical information while delivering trusted home healthcare services.",
         alternates: {
             canonical: "https://quickhomedoctor.com/privacy-policy",
+            
           },
 };
 export default function PrivacyPolicyPage() {

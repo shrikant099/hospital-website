@@ -55,6 +55,7 @@ export default function BookAppointment() {
             .then(() => {
                 setLoading(false);
                 setSuccessMsg("Your appointment request has been sent successfully!");
+                
 
                 setForm({
                     name: "",

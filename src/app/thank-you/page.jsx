@@ -4,6 +4,7 @@ export const metadata = {
     robots: "index, follow",
     alternates: {
         canonical: "https://quickhomedoctor.com/thank-you",
+        
     },
 };
 

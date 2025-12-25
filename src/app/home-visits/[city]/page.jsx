@@ -16,6 +16,7 @@ export async function generateMetadata({ params }) {
       description:
         "Doctor and nurse home visit services available across Delhi NCR.",
       robots: "noindex",
+      
     };
   }
 
