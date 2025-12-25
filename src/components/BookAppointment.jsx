@@ -90,6 +90,8 @@ export default function BookAppointment() {
             <p className="text-gray-600 text-center max-w-2xl mx-auto mt-4 mb-12 leading-relaxed">
                 Our coordination team ensures fast medical response. Book your
                 appointment and connect with certified doctors for personalized care at home.
+                &nbsp;
+                <Link href="/our-doctors" className="underline text-orange-400">Find Specialist Doctors</Link>
             </p>
 
             {/* Wrapper Card */}

@@ -7,11 +7,13 @@ import Navbar from '@/components/Navbar'
 import DoctorsSection from '@/components/Our-doctors-Card'
 import React from 'react'
 export const metadata = {
-    title: "Our Doctors | Experienced Home Visit Doctors in Delhi NCR",
-    description:
-        "Meet our experienced and certified doctors providing trusted home visit medical care across Delhi NCR.",
-};
-
+    title: "Our Doctors | Quick Home Doctor",
+    description: "Meet experienced doctors at Quick Home Doctor. Book home consultation easily.",
+    alternates: {
+      canonical: "https://quickhomedoctor.com/our-doctors",
+    },
+  };
+  
 const page = () => {
     return (
         <>

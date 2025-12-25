@@ -6,6 +6,9 @@ export const metadata = {
     title: "Terms & Conditions | Quick Home Doctor",
     description:
         "Read the terms and conditions for using Quick Home Doctor services, including doctor and nurse home visits across Delhi NCR.",
+        alternates: {
+            canonical: "https://quickhomedoctor.com/terms-and-conditions",
+          },
 };
 
 export default function TermsAndConditionsPage() {

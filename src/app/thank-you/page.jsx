@@ -2,6 +2,9 @@ export const metadata = {
     title: "Thank You | Quick Home Doctor",
     description: "Thank you for contacting Quick Home Doctor. Our team will reach out shortly.",
     robots: "index, follow",
+    alternates: {
+        canonical: "https://quickhomedoctor.com/thank-you",
+    },
 };
 
 export default function ThankYouPage() {

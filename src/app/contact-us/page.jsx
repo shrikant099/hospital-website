@@ -6,6 +6,9 @@ export const metadata = {
     title: "Contact Us | Quick Home Doctor – Home Healthcare in Delhi NCR",
     description:
         "Contact Quick Home Doctor for doctor and nurse home visit services across Delhi NCR. Call or WhatsApp us for quick assistance.",
+        alternates: {
+            canonical: "https://quickhomedoctor.com/contact-us",
+          },
 };
 
 export default function ContactUsPage() {

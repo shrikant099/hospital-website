@@ -7,6 +7,9 @@ export const metadata = {
     title: "Privacy Policy | Quick Home Doctor",
     description:
         "Read how Quick Home Doctor protects your personal and medical information while delivering trusted home healthcare services.",
+        alternates: {
+            canonical: "https://quickhomedoctor.com/privacy-policy",
+          },
 };
 export default function PrivacyPolicyPage() {
     // const fadeUp = {

@@ -41,7 +41,7 @@ export const metadata = {
     siteName: "Quick Home Doctor",
     images: [
       {
-        url: "/og-image.png", // 🔥 rename file
+        url: "/og-image.png", 
         width: 1200,
         height: 630,
         alt: "Quick Home Doctor – Doctor & Nurse Home Visit",
