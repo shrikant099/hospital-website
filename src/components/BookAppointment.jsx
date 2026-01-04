@@ -6,6 +6,7 @@ import Link from "next/link";
 import { useState } from "react";
 import emailjs from "@emailjs/browser";
 import { SERVICE_ID, BOOK_APPOINTMENT_TEMPLATE_ID, PUBLIC_KEY, ENQUIRY_TEMPLATE_ID } from "@/constant";
+import { useRouter } from "next/navigation";
 
 export default function BookAppointment() {
     const [form, setForm] = useState({
@@ -16,6 +17,7 @@ export default function BookAppointment() {
         message: "",
     });
 
+    const router = useRouter()
     const [loading, setLoading] = useState(false);
     const [successMsg, setSuccessMsg] = useState("");
 
@@ -39,6 +41,7 @@ export default function BookAppointment() {
         setLoading(true);
         setSuccessMsg("");
 
+        // Send data on email Appoitment data 
         emailjs
             .send(
                 SERVICE_ID,
@@ -51,11 +54,10 @@ export default function BookAppointment() {
                     message: form.message,
                 },
                 PUBLIC_KEY
-            )
-            .then(() => {
+            ).then(() => {
                 setLoading(false);
                 setSuccessMsg("Your appointment request has been sent successfully!");
-                
+
 
                 setForm({
                     name: "",
@@ -64,8 +66,9 @@ export default function BookAppointment() {
                     timeSlot: "08:00 - 10:00 AM",
                     message: "",
                 });
-            })
-            .catch((err) => {
+                // Redirect To thank-you page 
+                router.push("/thank-you");
+            }).catch((err) => {
                 console.log(err);
                 setLoading(false);
                 alert("Failed to send appointment request. Please try again.");

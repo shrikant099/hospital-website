@@ -5,8 +5,10 @@ import Image from "next/image";
 import { useState, useEffect } from "react";
 import emailjs from "@emailjs/browser";
 import { PUBLIC_KEY, SERVICE_ID, TEMPLATE_ID } from "@/constant";
+import { useRouter } from "next/navigation";
 
 export default function Hero() {
+    const router = useRouter()
     const cities = ["Delhi", "Gurugram", "Noida", "Ghaziabad"];
     const [cityIndex, setCityIndex] = useState(0);
     const [text, setText] = useState("");
@@ -75,6 +77,9 @@ export default function Hero() {
                 alert("Failed to send. Please try again.");
                 console.log(err);
             });
+
+        // push route on thankyou page 
+        router.push("/thank-you");
     };
 
     return (
