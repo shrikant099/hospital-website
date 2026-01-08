@@ -76,6 +76,7 @@ export default function RootLayout({ children }) {
       <head>
         {/* Google tag manager */}
 
+
         {/* ================= GOOGLE TAG MANAGER ================= */}
         <Script
           id="gtm-script"
