@@ -158,7 +158,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 
 
         {/* CALL BUTTON */}
-        <a href="tel:+7303771900" className="call-float">
+        <a href="tel:+917303771900" className="call-float">
           <img
             src="https://cdn-icons-png.flaticon.com/512/724/724664.png"
             alt="Call"
@@ -167,7 +167,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 
         {/* WHATSAPP BUTTON */}
         <a
-          href="https://wa.me/7303771900"
+          href="https://wa.me/7303771900?text=Hello, I need a doctor home visit service. Please share availability and charges. Thank you."
           target="_blank"
           rel="noopener noreferrer"
           className="whatsapp-float"
