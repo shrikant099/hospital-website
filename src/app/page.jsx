@@ -15,13 +15,12 @@ import PatientReviewsSection from "@/components/PatientReviewsSection.jsx";
 import FAQSection from "@/components/FaqSection.jsx";
 import NeedDoctorCTA from "@/components/NeedDoctorCTA.jsx";
 import DoctorHomeSection from "@/components/DoctorHomeSection.jsx";
-import LocationHandler from "@/components/LocationHandler.jsx";
 
 // Main homepage component that assembles all the sections together
 export default function Home() {
   return (
     <main className="min-h-screen bg-white">
-     <LocationHandler/>
+
       <Navbar />
       <Hero cityName="15 minutes" />
       <GoalsSection />
