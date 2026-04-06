@@ -5,7 +5,7 @@ import BookAppointment from '@/components/BookAppointment'
 import EnquirySection from '@/components/EnquirySection'
 import Footer from '@/components/Footer'
 import Navbar from '@/components/Navbar'
-import OtherServices from '@/components/OtherServices'
+
 import React from 'react'
 import { motion } from 'framer-motion'
 import Image from 'next/image'
@@ -134,8 +134,8 @@ export const ServiceClient = ({slug}) => {
                 </div>
             </section>
 
-            {/* OTHER SERVICES CAROUSEL ONLY FOR OTHER-SERVICES */}
-            {slug === "other-services" && <OtherServices />}
+            {/* OTHER SERVICES CAROUSEL ONLY FOR OTHER-SERVICES
+            {slug === "other-services" && <OtherServices />} */}
 
             <BookAppointment />
             <EnquirySection />
