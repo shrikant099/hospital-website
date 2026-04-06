@@ -4,27 +4,27 @@ import { motion } from "framer-motion";
 import { FiPhoneCall } from "react-icons/fi";
 import { FaUserDoctor } from "react-icons/fa6";
 import { MdHealthAndSafety } from "react-icons/md";
+import Link from "next/link";
 
 export default function StepsSection() {
-
     const steps = [
         {
             id: 1,
             title: "Call Our Medical Team",
-            desc: "Our medical support team instantly connects you with an expert for quick assistance.",
-            icon: <FiPhoneCall className="text-[#c26418]" size={60} />,
+            desc: "Our medical support team instantly connects you with an expert for quick assistance. Call, WhatsApp, or fill the form.",
+            icon: <FiPhoneCall className="text-brand-primary" size={60} />,
         },
         {
             id: 2,
             title: "Explain Symptoms",
-            desc: "Share the patient’s condition clearly. Our doctor notes symptoms and verifies your location.",
-            icon: <FaUserDoctor className="text-[#c26418]" size={60} />,
+            desc: "Share the patient's condition clearly. Our doctor notes symptoms and verifies your location in Delhi NCR.",
+            icon: <FaUserDoctor className="text-brand-primary" size={60} />,
         },
         {
             id: 3,
             title: "Doctor Visits Your Home",
-            desc: "A certified doctor or nurse arrives at your home for check-up, treatment or medical care.",
-            icon: <MdHealthAndSafety className="text-[#c26418]" size={65} />,
+            desc: "A certified doctor or nurse arrives at your home for check-up, treatment or medical care — in 15 minutes.",
+            icon: <MdHealthAndSafety className="text-brand-primary" size={65} />,
         },
     ];
 
@@ -38,13 +38,13 @@ export default function StepsSection() {
                     whileInView={{ opacity: 1, y: 0 }}
                     viewport={{ once: true }}
                     transition={{ duration: 0.6 }}
-                    className="text-3xl md:text-4xl font-extrabold text-[#064e53] mb-10 leading-snug"
+                    className="text-3xl md:text-4xl font-extrabold text-gray-800 mb-10 leading-snug"
                 >
-                    Steps to{" "}
-                    <span className="bg-gradient-to-r from-[#c26418] to-[#f6a65e] bg-clip-text text-transparent">
-                        Book
+                    How it
+                    <span className="bg-gradient-to-r from-[#C26418] to-[#C26518] bg-clip-text text-transparent">
+                     Works 
                     </span>{" "}
-                    a Home Visit Appointment
+                   | How to Book Doctor’s consultation at home in delhi 
                 </motion.h2>
 
                 {/* Steps Grid */}
@@ -70,7 +70,7 @@ export default function StepsSection() {
                             </h4>
 
                             {/* Title */}
-                            <h3 className="text-xl font-bold text-[#006666] mt-2">
+                            <h3 className="text-xl font-bold text-gray-800 mt-2">
                                 {step.title}
                             </h3>
 
@@ -81,6 +81,15 @@ export default function StepsSection() {
                         </motion.div>
                     ))}
                 </div>
+            </div>
+            <div className="flex justify-center lg:flex mt-10 items-center gap-2">
+              {/* Book Now */}
+              <Link
+                href="/instant-booking"
+                className="flex items-center gap-2 px-5 py-3.5 font-bold bg-brand-secondary text-white rounded-xl transition text-sm shadow-md shadow-blue-200"
+              >
+             Book a Doctor Now
+              </Link>
             </div>
         </section>
     );

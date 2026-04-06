@@ -1,3 +1,5 @@
+export const dynamic = "force-static";
+export const revalidate = 604800; // 7 days
 
 import AnnouncementBar from "@/components/AnnouncementBar";
 import Footer from "@/components/Footer";

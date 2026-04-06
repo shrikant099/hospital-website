@@ -1,238 +1,134 @@
 "use client";
+import { motion, AnimatePresence } from "framer-motion";
 
-import { motion } from "framer-motion";
-import Image from "next/image";
-import { useState, useEffect } from "react";
-import emailjs from "@emailjs/browser";
-import { PUBLIC_KEY, SERVICE_ID, TEMPLATE_ID } from "@/constant";
-import { useRouter } from "next/navigation";
+const heroImage = {
+  url: "https://res.cloudinary.com/dux71tf7r/image/upload/v1774797043/Gemini_Generated_Image_v3h8kmv3h8kmv3h8_1_cobimh.png",
+  alt: "Nurse taking care of elderly patient",
+};
 
-export default function Hero() {
-    const router = useRouter()
-    const cities = ["Delhi", "Gurugram", "Noida", "Ghaziabad"];
-    const [cityIndex, setCityIndex] = useState(0);
-    const [text, setText] = useState("");
-    const [isDeleting, setIsDeleting] = useState(false);
+export default function Hero({ cityName = "Delhi" }) {
+  return (
+    <section
+      className="relative mt-[90px] w-full min-h-screen flex items-center justify-center overflow-hidden"
+      style={{ minHeight: "100svh" }}
+    >
+      {/* ====== BACKGROUND CAROUSEL ====== */}
+      <div className="absolute inset-0 w-full h-full">
+        <AnimatePresence mode="sync">
+          <motion.div
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            exit={{ opacity: 0 }}
+            transition={{ duration: 1.4, ease: "easeInOut" }}
+            className="absolute inset-0 w-full h-full"
+          >
+            {/* Regular img tag — full cover on all screen sizes */}
+            {/* eslint-disable-next-line @next/next/no-img-element */}
+            <img
+              src={heroImage.url}
+              alt={heroImage.alt}
+              className="w-full h-full"
+              style={{
+                objectFit: "cover",
+                objectPosition: "center",
+                filter: "brightness(0.52)",
+                position: "absolute",
+                inset: 0,
+                width: "100%",
+                height: "100%",
+              }}
+            />
+          </motion.div>
+        </AnimatePresence>
 
-    const [form, setForm] = useState({
-        name: "",
-        mobile: "",
-        email: "",
-    });
+        {/* Extra dark overlay for text readability */}
+        <div className="absolute" />
+      </div>
 
-    const [loading, setLoading] = useState(false);
-    const [successMsg, setSuccessMsg] = useState("");
+      {/* ====== MAIN CONTENT ====== */}
+      <div className="relative z-10 w-full flex flex-col items-center justify-center max-w-5xl mx-auto px-4 sm:px-6 md:px-10 py-24 text-center">
+        {/* HEADING */}
+        <motion.h1
+          initial={{ opacity: 0, y: 50 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8, delay: 0.1 }}
+          className="text-[26px] sm:text-[34px] md:text-[44px] lg:text-[54px] font-extrabold leading-tight mb-6 text-white drop-shadow-lg"
+        >
+          Expert Certified MD & GP Doctor & Nurse at home
+          <br />
+          <span className="text-white">IN </span>
+          <span className="text-gray-200 text-[28px] sm:text-[36px] md:text-[46px] lg:text-[56px] font-extrabold leading-tight drop-shadow-lg">
+            {cityName.toUpperCase()}
+          </span>
+        </motion.h1>
 
-    useEffect(() => {
-        let currentCity = cities[cityIndex];
-        let speed = isDeleting ? 60 : 120;
+        {/* BULLET POINTS */}
+        <motion.ul
+          initial={{ opacity: 0, y: 30 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8, delay: 0.35 }}
+          className="space-y-2 text-base sm:text-lg md:text-xl text-gray-100 mb-10"
+        >
+          {/* {[
+            "Certified GP & MD doctors serving Delhi",
+            "Delhi NCR, Noida, Gurgaon & Ghaziabad.",
+            "No waiting rooms. No queues. Just real medical care at home",
+          ].map((point, i) => (
+            <li
+              key={i}
+              className="flex gap-3 items-center justify-center font-bold drop-shadow"
+            >
+              <span className="text-[#C26418] text-lg">●</span>
+              {point}
+            </li>
+          ))} */}
+          <p className="flex gap-3 items-center justify-center font-bold drop-shadow">
+            Certified GP & MD doctors serving Delhi, Delhi NCR, Noida, Gurgaon &<br></br>
+            Ghaziabad. No waiting rooms. No queues. Just real medical care at
+            home.
+          </p>
+        </motion.ul>
 
-        const typing = setTimeout(() => {
-            setText((prev) =>
-                isDeleting
-                    ? currentCity.substring(0, prev.length - 1)
-                    : currentCity.substring(0, prev.length + 1)
-            );
+        {/* CTA BUTTONS */}
+        <motion.div
+          initial={{ opacity: 0, y: 30 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8, delay: 0.55 }}
+          className="flex flex-row gap-3 justify-center"
+        >
+          <a
+            href="tel:+917303771900"
+            className="inline-flex items-center justify-center gap-2 px-5 py-3 sm:px-8 sm:py-4 bg-[#064E53] text-white font-bold rounded-xl shadow-2xl text-sm sm:text-lg transition-all duration-200 hover:scale-105 active:scale-95"
+          >
+            Call Now
+          </a>
+          <a
+            href="https://wa.me/917303771900"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="inline-flex items-center justify-center gap-2 px-5 py-3 sm:px-8 sm:py-4 bg-white/15 hover:bg-white/25 backdrop-blur-sm border-2 border-white/50 text-white font-bold rounded-xl shadow-2xl text-sm sm:text-lg transition-all duration-200 hover:scale-105 active:scale-95"
+          >
+            WhatsApp Us
+          </a>
+        </motion.div>
 
-            if (!isDeleting && text === currentCity) {
-                setTimeout(() => setIsDeleting(true), 800);
-            }
-
-            if (isDeleting && text === "") {
-                setIsDeleting(false);
-                setCityIndex((prev) => (prev + 1) % cities.length);
-            }
-        }, speed);
-
-        return () => clearTimeout(typing);
-    }, [text, isDeleting, cityIndex]);
-
-    const handleChange = (e) => {
-        setForm({ ...form, [e.target.name]: e.target.value });
-    };
-
-    const handleSubmit = (e) => {
-        e.preventDefault();
-        setLoading(true);
-        setSuccessMsg("");
-
-        emailjs
-            .send(
-                SERVICE_ID,
-                TEMPLATE_ID,
-                {
-                    patient_name: form.name,
-                    mobile: form.mobile,
-                    email: form.email,
-                },
-                PUBLIC_KEY
-            )
-            .then(() => {
-                setLoading(false);
-                setSuccessMsg("Appointment Request Sent Successfully!");
-                setForm({ name: "", mobile: "", email: "" });
-            })
-            .catch((err) => {
-                setLoading(false);
-                alert("Failed to send. Please try again.");
-                console.log(err);
-            });
-
-        // push route on thankyou page 
-        router.push("/thank-you");
-    };
-
-    return (
-        <section className="relative mt-[90px] pt-20 pb-10 w-full min-h-screen flex items-center justify-center overflow-hidden">
-            {/* BACKGROUND IMAGE */}
-            <div className="absolute inset-0">
-                <Image
-                    src="/1.png"
-                    alt="Hospital Background"
-                    fill
-                    quality={70}
-                    className="object-cover object-center brightness-[0.62]"
-                    priority
-                />
-            </div>
-
-            <div className="relative items-center w-full flex flex-col-reverse md:flex-row max-w-7xl mx-auto px-4 sm:px-6 md:px-10 gap-14 md:gap-20">
-
-                {/* LEFT BOX */}
-                <motion.div
-                    initial={{ opacity: 0, y: 60 }}
-                    whileInView={{ opacity: 1, y: 0 }}
-                    transition={{ duration: 0.7 }}
-                    viewport={{ once: true }}
-                    className="bg-white/20 backdrop-blur-md border border-white/30 shadow-2xl rounded-2xl p-6 sm:p-8 md:p-10 text-white max-w-md w-full"
-                >
-                    <h2 className="text-2xl md:text-3xl font-bold mb-6">
-                        Schedule an Appointment
-                    </h2>
-
-                    <form onSubmit={handleSubmit} className="space-y-5">
-                        <div>
-                            <label className="block mb-1 font-semibold">Patient Name</label>
-                            <input
-                                type="text"
-                                name="name"
-                                value={form.name}
-                                onChange={handleChange}
-                                placeholder="Enter patient name"
-                                className="w-full px-4 py-3 rounded-lg border bg-white/30 border-white/40 text-white placeholder-white/70"
-                                required
-                            />
-                        </div>
-
-                        <div>
-                            <label className="block mb-1 font-semibold">Enter Mobile Number</label>
-                            <input
-                                type="tel"
-                                name="mobile"
-                                value={form.mobile}
-                                onChange={(e) => {
-                                    // Only numbers + limit 10
-                                    const value = e.target.value.replace(/\D/g, "");
-                                    if (value.length <= 10) {
-                                        setForm({ ...form, mobile: value });
-                                    }
-                                }} placeholder="Enter number"
-                                className="w-full px-4 py-3 rounded-lg border bg-white/30 border-white/40 text-white placeholder-white/70"
-                                required
-                                maxLength={10}
-                            />
-                        </div>
-
-                        <div>
-                            <label className="block mb-1 font-semibold">Enter Email</label>
-                            <input
-                                type="email"
-                                name="email"
-                                value={form.email}
-                                onChange={handleChange}
-                                placeholder="Enter email"
-                                className="w-full px-4 py-3 rounded-lg border bg-white/30 border-white/40 text-white placeholder-white/70"
-                                required
-                            />
-                        </div>
-
-                        {/* SUCCESS MESSAGE */}
-                        {successMsg && (
-                            <p className="text-green-300 font-semibold">{successMsg}</p>
-                        )}
-
-                        <div className="mt-8 flex flex-col sm:flex-row gap-4">
-                            <button
-                                type="submit"
-                                disabled={loading}
-                                className="w-full sm:w-auto px-8 py-3 bg-blue-600 disabled:bg-blue-400 text-white font-semibold rounded-xl shadow-lg flex items-center justify-center gap-2"
-                            >
-                                {loading ? (
-                                    <div className="w-5 h-5 border-2 border-white border-t-transparent rounded-full animate-spin"></div>
-                                ) : (
-                                    "Submit Now"
-                                )}
-                            </button>
-
-                            <a
-                                href="tel:+917303771900"
-                                className="w-full sm:w-auto px-8 py-3 bg-white text-blue-700 font-semibold rounded-xl shadow-lg text-center"
-                            >
-                                Call Now
-                            </a>
-                        </div>
-                    </form>
-                </motion.div>
-
-                {/* RIGHT CONTENT */}
-                <motion.div
-                    initial={{ opacity: 0, x: 80 }}
-                    whileInView={{ opacity: 1, x: 0 }}
-                    transition={{ duration: 0.8 }}
-                    viewport={{ once: true }}
-                    className="text-white md:pr-8 text-center md:text-left"
-                >
-                    <motion.h1
-                        initial={{ opacity: 0, x: 70 }}
-                        whileInView={{ opacity: 1, x: 0 }}
-                        transition={{ duration: 0.8, delay: 0.1 }}
-                        viewport={{ once: true }}
-                        className="text-[22px] sm:text-[30px] md:text-[28px] lg:text-[39px] font-extrabold leading-tight mb-6"
-                    >
-                        DOCTOR & NURSE <span className=" font-extrabold">HOME</span> <br />
-                        VISIT IN{" "}
-                        <span
-                            className="
-                           font-extrabold
-                           text-[21px] sm:text-[22px] md:text-[28px] lg:text-[39px]
-                           bg-gradient-to-r from-[#f5f5f5] via-[#f7f7f7] to-[#ede9ed8c]
-                           text-transparent bg-clip-text
-                       "
-
-                        >
-                            {text}
-                            <span className="animate-pulse">|</span>
-                        </span>
-                    </motion.h1>
-
-                    <ul className="space-y-1 text-base sm:text-lg md:text-xl text-gray-200">
-                        <motion.li className="flex gap-3 justify-center md:justify-start font-bold">
-                            <span className="text-white text-2xl">•</span>
-                            GP & MD Doctor Consultation
-                        </motion.li>
-
-                        <motion.li className="flex gap-3 justify-center md:justify-start font-bold">
-                            <span className="text-white text-2xl">•</span>
-                            Comfortable Check-up at Home
-                        </motion.li>
-
-                        <motion.li className="flex gap-3 justify-center md:justify-start font-bold">
-                            <span className="text-white text-2xl">•</span>
-                            Personalized Home Care Services
-                        </motion.li>
-                    </ul>
-                </motion.div>
-            </div>
-        </section>
-    );
+        {/* PHONE NUMBER SUBTEXT */}
+        <motion.p
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          transition={{ duration: 0.8, delay: 0.75 }}
+          className="mt-6 text-white/60 text-sm drop-shadow"
+        >
+          Or call directly:{" "}
+          <a
+            href="tel:+917303771900"
+            className="text-white/90 font-semibold underline underline-offset-2 hover:text-white"
+          >
+            +91 7303771900
+          </a>{" "}
+          · We respond immediately
+        </motion.p>
+      </div>
+    </section>
+  );
 }

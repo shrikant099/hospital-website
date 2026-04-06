@@ -1,6 +1,8 @@
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 import Script from "next/script";
+import { Analytics } from "@vercel/analytics/react";
+import { SpeedInsights } from "@vercel/speed-insights/next";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -15,7 +17,8 @@ const geistMono = Geist_Mono({
 export const metadata = {
   metadataBase: new URL("https://quickhomedoctor.com"),
 
-  title: "Home Doctor & Nurse Visit | Delhi, Noida, Ghaziabad | Quick Home Doctor",
+  title:
+    "Home Doctor & Nurse Visit | Delhi, Noida, Ghaziabad | Quick Home Doctor",
   description:
     "Doctor and nurse home visit within 30 minutes in Delhi NCR. 24/7 medical care at home.",
 
@@ -66,17 +69,13 @@ export const metadata = {
     shortcut: [{ url: "/favicon.ico" }],
     apple: [{ url: "/favicon.ico" }],
   },
-
 };
-
-
 
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <head>
         {/* Google tag manager */}
-
 
         {/* ================= GOOGLE TAG MANAGER ================= */}
         <Script id="gtm-id" strategy="afterInteractive">
@@ -151,33 +150,16 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
       >
         {/* ================= GTM NOSCRIPT ================= */}
         <noscript>
-          <iframe src="https://www.googletagmanager.com/ns.html?id=GTM-TCLQBVST"
-            height="0" width="0" style={{ display: "none", visibility: "hidden" }}>
-          </iframe>
+          <iframe
+            src="https://www.googletagmanager.com/ns.html?id=GTM-TCLQBVST"
+            height="0"
+            width="0"
+            style={{ display: "none", visibility: "hidden" }}
+          ></iframe>
         </noscript>
-
-
-        {/* CALL BUTTON */}
-        <a href="tel:+917303771900" className="call-float">
-          <img
-            src="https://cdn-icons-png.flaticon.com/512/724/724664.png"
-            alt="Call"
-          />
-        </a>
-
-        {/* WHATSAPP BUTTON */}
-        <a
-          href="https://wa.me/7303771900?text=Hello, I need a doctor home visit service. Please share availability and charges. Thank you."
-          target="_blank"
-          rel="noopener noreferrer"
-          className="whatsapp-float"
-        >
-          <img
-            src="https://cdn-icons-png.flaticon.com/512/733/733585.png"
-            alt="WhatsApp"
-          />
-        </a>
         {children}
+        <Analytics />
+        <SpeedInsights />
       </body>
     </html>
   );

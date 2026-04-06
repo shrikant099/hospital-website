@@ -1,3 +1,6 @@
+export const dynamic = "force-static";
+export const revalidate = 2592000; // 30 days
+
 import AboutSection from '@/components/About-Us'
 import AnnouncementBar from '@/components/AnnouncementBar'
 import EnquirySection from '@/components/EnquirySection'
@@ -22,7 +25,7 @@ const page = () => {
       <AnnouncementBar />
       <Navbar />
       <AboutSection />
-      <FAQSection />
+      <FAQSection citySlug="delhi-ncr" cityName="Delhi NCR" />
 
       <GoalsSection />
       <EnquirySection />

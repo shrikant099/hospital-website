@@ -6,34 +6,35 @@ import Image from "next/image";
 export default function LatestBlogs() {
   const blogs = [
     {
-      category: "Health Care",
-      title:
-        "Foot Care Basics for Elderly Diabetics: A Daily Checklist for Caregivers",
-      author: "Admin",
-      date: "19 November 2025",
+      category: "Home Healthcare",
+      title: "Doctor at Home in Delhi NCR: When to Call & What to Expect",
+      author: "QuickHomeDoctor Team",
+      date: "15 March 2026",
       description:
-        "Daily foot care tips for elderly diabetics. A simple checklist for caregivers to prevent complications.",
+        "Not sure when to call a doctor home? This guide explains the right time to book a home visit doctor in Delhi NCR — symptoms, process and what to expect.",
       image: "/1.png",
+      slug: "doctor-at-home-delhi-ncr-guide",
     },
     {
-      category: "Health Care",
-      title:
-        "Recognizing Warning Signs of Heart Issues in the Elderly: When to Call a Doctor",
-      author: "Admin",
-      date: "27 October 2025",
+      category: "Elderly Care",
+      title: "Elderly Care at Home in Delhi: Complete Guide for Families",
+      author: "QuickHomeDoctor Team",
+      date: "28 February 2026",
       description:
-        "Learn to identify early signs of heart issues in seniors and know exactly when a doctor's care is needed.",
+        "Planning home care for your elderly parents in Delhi? Learn about caretaker services, nurse at home, doctor visits and what to look for when hiring home healthcare.",
       image: "/2.png",
+      slug: "elderly-care-at-home-delhi-guide",
     },
     {
-      category: "Health Care",
+      category: "Home Healthcare",
       title:
-        "Soothing Senior Coughs & Colds: Safe Home Remedies Your Parents Can Try",
-      author: "Admin",
-      date: "30 September 2025",
+        "Nurse at Home vs Hospital: Which Is Better for Post-Surgery Recovery?",
+      author: "QuickHomeDoctor Team",
+      date: "10 February 2026",
       description:
-        "Ease your parents’ coughs and colds with these safe home remedies made specially for seniors.",
+        "Recovering after surgery? Know when a nurse at home in Delhi NCR is better than staying in hospital — cost, comfort, and care quality compared.",
       image: "/3.png",
+      slug: "nurse-at-home-vs-hospital-recovery",
     },
   ];
 
@@ -45,7 +46,6 @@ export default function LatestBlogs() {
   return (
     <section className="py-20 bg-white">
       <div className="max-w-7xl mx-auto px-6">
-
         {/* HEADING */}
         <motion.div
           variants={fadeUp}
@@ -104,14 +104,11 @@ export default function LatestBlogs() {
                 </p>
 
                 {/* DESCRIPTION */}
-                <p className="text-gray-600 text-sm mt-3">
-                  {blog.description}
-                </p>
+                <p className="text-gray-600 text-sm mt-3">{blog.description}</p>
               </div>
             </motion.div>
           ))}
         </div>
-
       </div>
     </section>
   );
