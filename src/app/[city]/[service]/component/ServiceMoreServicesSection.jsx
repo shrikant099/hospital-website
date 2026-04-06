@@ -130,10 +130,13 @@ const services = [
 
 // Server Component — params directly as prop
 export default function ServicesMoreServicesSection({ city, service }) {
-  const cityDisplay = city.charAt(0).toUpperCase() + city.slice(1);
+  const citySlug = city
+  .toLowerCase()
+  .trim()
+  .replace(/\s+/g, '-');  // "New Delhi" → "new-delhi" ✅
 
-  // Current service page ko filter out karo
-  const otherServices = services.filter((s) => s.slug !== service);
+const cityDisplay = city.charAt(0).toUpperCase() + city.slice(1);
+const otherServices = services.filter((s) => s.slug !== service);
 
   return (
     <section className="py-12 px-4 bg-white">
@@ -163,8 +166,8 @@ export default function ServicesMoreServicesSection({ city, service }) {
         <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-3">
           {otherServices.map((svc) => (
             <Link
-              key={svc.slug}
-              href={`/${city.toLowerCase()}/${svc.slug}`}
+            key={svc.slug}
+            href={`/${citySlug}/${svc.slug}`}
               className="group relative bg-white border border-[#e8f0f0] rounded-2xl p-4 flex flex-col items-center gap-2.5 
                          hover:-translate-y-1 hover:border-[#b5d4d5] hover:shadow-[0_8px_24px_rgba(6,78,83,0.10)]
                          transition-all duration-200 overflow-hidden"
