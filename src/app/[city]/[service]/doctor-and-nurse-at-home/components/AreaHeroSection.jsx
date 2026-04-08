@@ -4,24 +4,58 @@ import { useState } from "react";
 import Link from "next/link";
 import { replacePlaceholders as rp } from "@/utils/replacePlaceholders";
 import { areaContent } from "@/data/areaContent";
+import emailjs from "@emailjs/browser";
+import { ENQUIRY_TEMPLATE_ID, PUBLIC_KEY, SERVICE_ID } from "@/constant";
 
 export default function AreaHeroSection({ areaName, cityName, citySlug }) {
   const [name, setName] = useState("");
   const [phone, setPhone] = useState("");
+  const [status, setStatus] = useState("idle"); // idle | loading | success | error
+
   const [submitted, setSubmitted] = useState(false);
 
   const { hero } = areaContent;
   const title = rp(hero.heroTitle, areaName, cityName);
   const description = rp(hero.heroDescription, areaName, cityName);
 
-  // Split title for styled rendering: 
-  // "Doctor and Nurse at Home in Karol Bagh, Delhi"
-  // We bold-highlight area+city part
-  const handleSubmit = (e) => {
+  // Split title for styled rendering:
+
+  const handleSubmit = async (e) => {
     e.preventDefault();
-    if (!name.trim() || phone.length < 10) return;
-    // TODO: connect to your API / WhatsApp
-    setSubmitted(true);
+  
+    if (!name.trim() || phone.length < 10) {
+      setStatus("error");
+      return;
+    }
+  
+    try {
+      setStatus("loading");
+  
+      await emailjs.send(
+        SERVICE_ID,
+        ENQUIRY_TEMPLATE_ID,
+        {
+          patient_name: name.trim(),
+          mobile: phone,
+          time: new Date().toLocaleString("en-IN", {
+            dateStyle: "medium",
+            timeStyle: "short",
+          }),
+          page: `Doctor & Nurse at Home – ${areaName}, ${cityName}`,
+        },
+        PUBLIC_KEY
+      );
+  
+      setStatus("success");
+      setSubmitted(true);
+  
+      setName("");
+      setPhone("");
+  
+    } catch (error) {
+      console.error("Booking error:", error);
+      setStatus("error");
+    }
   };
 
   return (
@@ -30,20 +64,28 @@ export default function AreaHeroSection({ areaName, cityName, citySlug }) {
       <div className="h-1 w-full bg-gradient-to-r from-teal-500 via-teal-400 to-teal-600" />
 
       <div className="max-w-6xl mx-auto px-4 sm:px-6 py-8 md:py-12">
-
         {/* ── Breadcrumb ──────────────────────────────────────────── */}
         <nav aria-label="breadcrumb" className="mb-5">
           <ol className="flex flex-wrap items-center gap-1.5 text-xs text-gray-400">
             <li>
-              <Link href="/" className="hover:text-teal-600 transition-colors">Home</Link>
+              <Link href="/" className="hover:text-teal-600 transition-colors">
+                Home
+              </Link>
             </li>
-            <li aria-hidden="true" className="text-gray-300">›</li>
+            <li aria-hidden="true" className="text-gray-300">
+              ›
+            </li>
             <li>
-              <Link href={`/${citySlug}`} className="hover:text-teal-600 transition-colors capitalize">
+              <Link
+                href={`/${citySlug}`}
+                className="hover:text-teal-600 transition-colors capitalize"
+              >
                 {cityName}
               </Link>
             </li>
-            <li aria-hidden="true" className="text-gray-300">›</li>
+            <li aria-hidden="true" className="text-gray-300">
+              ›
+            </li>
             <li className="text-gray-600 font-medium" aria-current="page">
               Doctor &amp; Nurse at Home in {areaName}
             </li>
@@ -52,10 +94,8 @@ export default function AreaHeroSection({ areaName, cityName, citySlug }) {
 
         {/* ── Two-column layout ────────────────────────────────────── */}
         <div className="flex flex-col lg:flex-row lg:items-start lg:gap-12">
-
           {/* ── LEFT: Content ───────────────────────────────────── */}
           <div className="flex-1 min-w-0">
-
             {/* H1 — SEO-optimised, styled */}
             <h1 className="text-[1.75rem] sm:text-[2.15rem] md:text-[2.5rem] font-extrabold text-gray-900 leading-tight tracking-tight mb-4">
               Doctor and Nurse at Home in{" "}
@@ -89,12 +129,11 @@ export default function AreaHeroSection({ areaName, cityName, citySlug }) {
           </div>
 
           {/* ── RIGHT: Form ─────────────────────────────────────── */}
-          {/* On mobile: shows below content as a full-width card */}
-          {/* On desktop: sticky on right side */}
           <div className="w-full lg:w-[360px] shrink-0 mt-10 lg:mt-0 lg:sticky lg:top-[88px]">
             <div className="bg-white border border-gray-200 rounded-2xl shadow-xl px-6 pt-6 pb-7">
               {!submitted ? (
                 <>
+                <form action="" onSubmit={handleSubmit}>               
                   <h2 className="text-lg font-bold text-gray-900 mb-0.5">
                     Book a Doctor &amp; Nurse at Home in {areaName}
                   </h2>
@@ -131,7 +170,7 @@ export default function AreaHeroSection({ areaName, cityName, citySlug }) {
                         maxLength={10}
                         value={phone}
                         onChange={(e) =>
-                          setPhone(e.target.value.replace(/\D/, ""))
+                          setPhone(e.target.value.replace(/\D/g, ""))
                         }
                         className="flex-1 px-3 py-2.5 bg-transparent text-sm text-gray-900 focus:outline-none"
                       />
@@ -140,14 +179,23 @@ export default function AreaHeroSection({ areaName, cityName, citySlug }) {
 
                   {/* Submit */}
                   <button
-                    onClick={handleSubmit}
-                    className="w-full cursor-pointer bg-[#c26418] hover:bg-[#a8531a] text-white font-bold text-sm py-3.5 rounded-lg transition-all duration-200 shadow-sm hover:shadow-md"
+                    type="submit"
+                    disabled={status === "loading"}
+                    className="w-full bg-[#c26418] text-white font-bold text-sm py-3.5 rounded-lg flex items-center justify-center gap-2 disabled:opacity-70"
                   >
-                    Submit
+                    {status === "loading" ? (
+                      <>
+                        <span className="w-4 h-4 border-2 border-white border-t-transparent rounded-full animate-spin"></span>
+                        Sending...
+                      </>
+                    ) : (
+                      "Submit"
+                    )}
                   </button>
                   <p className="text-center text-[11px] text-gray-400 mt-3">
                     No spam. No hidden charges. 100% confidential.
                   </p>
+                  </form>
                 </>
               ) : (
                 /* Success state */
@@ -160,7 +208,9 @@ export default function AreaHeroSection({ areaName, cityName, citySlug }) {
                   </h3>
                   <p className="text-sm text-gray-500 leading-relaxed">
                     Our team will call you back within{" "}
-                    <span className="font-semibold text-teal-600">2 minutes</span>{" "}
+                    <span className="font-semibold text-teal-600">
+                      2 minutes
+                    </span>{" "}
                     to confirm your visit in {areaName}.
                   </p>
                   <a
