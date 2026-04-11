@@ -44,9 +44,9 @@ export default function DoctorHomeSection() {
 
           {/* RIGHT CONTENT */}
           <div className="w-full md:w-1/2">
-            <h1 className="text-2xl md:text-4xl font-bold mb-4 leading-tight">
+            <h3 className="text-2xl md:text-4xl font-bold mb-4 leading-tight">
               24/7 Available to Assist You with Certified Doctor at Home
-            </h1>
+            </h3>
 
             <p className="text-gray-600 mb-4">
               At <strong>QuickHomeDoctor</strong>, we believe in caring for
@@ -65,7 +65,7 @@ export default function DoctorHomeSection() {
 
             <Link
             href={"/inquiry"}
-              onClick={() => router.push("/inquiry")}
+              onClick={() => router.push("/contact-us")}
               className="bg-brand-secondary text-white px-6 py-3 rounded-xl font-semibold transition"
             >
               Get Doctor Now

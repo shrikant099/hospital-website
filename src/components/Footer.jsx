@@ -29,12 +29,12 @@ export default function Footer() {
                     whileInView={{ opacity: 1, y: 0 }}
                     transition={{ duration: 0.6 }}
                 >
-                    <h2 className="text-3xl font-extrabold text-[#024c4a] mb-2">
+                    <h3 className="text-3xl font-extrabold text-[#024c4a] mb-2">
                         Quick
                         <span className="bg-gradient-to-r from-[#d76c24] to-[#ffb070] bg-clip-text text-transparent pb-4">
                             &nbsp;  <br /> HomeDoctor
                         </span>
-                    </h2>
+                    </h3>
 
                     <p className="text-gray-600 leading-relaxed mt-3 text-sm">
                         Trusted home healthcare delivering expert medical services right at
@@ -60,15 +60,16 @@ export default function Footer() {
                             </div>
                             <span className="text-gray-700 text-sm group-hover:text-[#0f706b] transition">
                                 <a
-                                    href="mailto:quickhomedoctor@gmail.com"
-                                >
-                                    quickhomedoctor@gmail.com
-                                </a>
+                                 href="mailto:quickhomedoctor@gmail.com"
+                className="text-gray-700 text-sm group-hover:text-[#0f706b] transition"
+              >
+                quickhomedoctor&#64;gmail&#46;com
+              </a>
                             </span>
                         </div>
                     </div>
                 {/* ADDRESS (SEO FIX) */}
-                <h2 className="mt-6 font-bold">Address</h2>
+                <h3 className="mt-6 font-bold">Address</h3>
                 <address className="mt-5 text-sm text-gray-600 not-italic leading-relaxed">
                     <strong>Quick Home Doctor</strong><br />
                     Home Healthcare Services<br />
@@ -100,7 +101,7 @@ export default function Footer() {
                         ].map((item, i) => (
                             <Link
                                 key={i}
-                                href="/services/other-services"
+                                href="/"
                                 className="flex items-center gap-2 hover:text-[#0f706b] transition cursor-pointer"
                             >
                                 <FiChevronRight size={16} />
@@ -142,12 +143,12 @@ export default function Footer() {
 
                             <li className="flex items-center gap-2 hover:text-[#0f706b] transition">
                                 <FiChevronRight size={16} />
-                                <Link href="/home-visits/delhi">Home Visit</Link>
+                                <Link href="/">Home Visit</Link>
                             </li>
 
                             <li className="flex items-center gap-2 hover:text-[#0f706b] transition">
                                 <FiChevronRight size={16} />
-                                <Link href="/services/home-care">Services</Link>
+                                <Link href="/">Services</Link>
                             </li>
 
                             <li className="flex items-center gap-2 hover:text-[#0f706b] transition">

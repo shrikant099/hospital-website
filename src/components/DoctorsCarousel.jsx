@@ -96,9 +96,9 @@ export default function DoctorsCarousel() {
 
   return (
     <section className="py-20 px-6 bg-white">
-      <h2 className="text-4xl font-extrabold text-center text-[#005f5e] mb-5">
+      <h3 className="text-4xl font-extrabold text-center text-[#005f5e] mb-5">
       Meet Our Expert team of Quick Home Doctors 
-      </h2>
+      </h3>
       <p
         className="
 text-center text-gray-600 mb-12 max-w-2xl mx-auto

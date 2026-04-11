@@ -14,12 +14,12 @@ export default function NeedDoctorCTA({ cityName = "", areaName = "" }) {
           {/* Content */}
           <div className="relative z-10">
             {/* Heading */}
-            <h2 className="text-2xl sm:text-3xl md:text-4xl font-extrabold text-gray-900 mb-3 leading-tight">
+            <h3 className="text-2xl sm:text-3xl md:text-4xl font-extrabold text-gray-900 mb-3 leading-tight">
               Need a Doctor at{" "}
               <span className="text-brand-primary">
                 {cityName ? cityName : areaName}?
               </span>
-            </h2>
+            </h3>
 
             {/* Subtext */}
             <p className="text-gray-500 text-sm sm:text-base max-w-lg mx-auto mb-8 leading-relaxed">

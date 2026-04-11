@@ -1,0 +1,31 @@
+# Quick Home Doctor
+
+> QuickHomeDoctor provides certified MD & GP doctor and nurse home visit services in Delhi NCR — Delhi, Noida, Gurgaon, and Ghaziabad. Medical care at home within 30 minutes, available 24/7.
+
+## Services
+- Doctor at Home
+- Nurse at Home
+- Physiotherapy at Home
+- X-Ray at Home
+- Injection at Home
+- ECG at Home
+- Lab Test at Home
+- Caretaker at Home
+- Elderly Care at Home
+- Medical Equipment at Home
+- ICU Setup at Home
+
+## Service Areas
+- Delhi
+- New Delhi
+- Noida
+- Gurgaon
+- Ghaziabad
+
+## Contact
+- Phone: +91 73037 71900
+- Email: quickhomedoctor@gmail.com
+- Website: https://quickhomedoctor.com
+
+## Docs
+- https://quickhomedoctor.com/sitemap.xml

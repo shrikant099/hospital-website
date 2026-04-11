@@ -54,9 +54,9 @@ export default function LatestBlogs() {
           viewport={{ once: true }}
           className="text-center mb-14"
         >
-          <h2 className="text-3xl md:text-4xl font-extrabold text-[#0a6664] tracking-wide">
+          <h3 className="text-3xl md:text-4xl font-extrabold text-[#0a6664] tracking-wide">
             LATEST BLOG POSTS
-          </h2>
+          </h3>
 
           <div className="flex justify-center mt-2">
             <span className="w-12 h-1 bg-gradient-to-r from-[#d76c24] to-[#ffb070] rounded"></span>

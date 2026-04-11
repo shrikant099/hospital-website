@@ -33,7 +33,7 @@ export default function StepsSection() {
             <div className="max-w-7xl mx-auto px-5 text-center">
 
                 {/* Heading */}
-                <motion.h2
+                <motion.h3
                     initial={{ opacity: 0, y: -20 }}
                     whileInView={{ opacity: 1, y: 0 }}
                     viewport={{ once: true }}
@@ -45,7 +45,7 @@ export default function StepsSection() {
                      Works 
                     </span>{" "}
                    | How to Book Doctor’s consultation at home in delhi 
-                </motion.h2>
+                </motion.h3>
 
                 {/* Steps Grid */}
                 <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8">
@@ -85,7 +85,7 @@ export default function StepsSection() {
             <div className="flex justify-center lg:flex mt-10 items-center gap-2">
               {/* Book Now */}
               <Link
-                href="/instant-booking"
+                href="/contact-us"
                 className="flex items-center gap-2 px-5 py-3.5 font-bold bg-brand-secondary text-white rounded-xl transition text-sm shadow-md shadow-blue-200"
               >
              Book a Doctor Now

@@ -115,7 +115,7 @@ export default function TermsAndConditionsPage() {
                     <br />
                     📧 Email:{" "}
                     <a href="mailto:quickhomedoctor@gmail.com">
-                        quickhomedoctor@gmail.com
+                        Email Us
                     </a>
                     <br />
                     📞 Phone:{" "}

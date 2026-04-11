@@ -39,7 +39,7 @@ export default function FAQSection({ citySlug = "delhi-ncr", cityName = "Delhi N
             <span className="inline-block text-xs font-semibold tracking-widest text-brand-primary uppercase bg-blue-50 px-4 py-1.5 rounded-full mb-4">
               FAQ
             </span>
-            <motion.h2
+            <motion.h3
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6 }}
@@ -47,7 +47,7 @@ export default function FAQSection({ citySlug = "delhi-ncr", cityName = "Delhi N
               className="text-2xl sm:text-3xl md:text-4xl font-extrabold text-gray-900 mb-3"
             >
               Frequently Asked Questions
-            </motion.h2>
+            </motion.h3>
             <p className="text-gray-500 text-sm sm:text-base">
               Common questions about our home healthcare services in{" "}
               <span className="font-semibold text-gray-700">{cityName}</span>

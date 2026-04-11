@@ -15,10 +15,10 @@ export default function ServiceAreasSection({ currentCity = "Delhi NCR" }) {
           </span>
 
           {/* H2 — Dynamic city name for SEO */}
-          <h2 className="text-2xl sm:text-3xl md:text-4xl font-extrabold text-gray-900 mb-3">
+          <h3 className="text-2xl sm:text-3xl md:text-4xl font-extrabold text-gray-900 mb-3">
           Certified Home healthcare at home in Delhi, Noida, Gurgaon, Ghaziabad & Delhi NCR {" "}
             {/* <span className="text-brand-primary-600">{currentCity}</span> */}
-          </h2>
+          </h3>
 
           <p className="text-gray-500 text-sm sm:text-base max-w-xl mx-auto leading-relaxed">
           Certified MD & GP doctors, nurses, and physicians serving at your home across Delhi, Noida, Gurgaon, Ghaziabad, and the entire NCR region.

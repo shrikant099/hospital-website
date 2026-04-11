@@ -77,7 +77,7 @@ export default function ContactUsPage() {
                                 href="mailto:quickhomedoctor@gmail.com"
                                 className="text-blue-600"
                             >
-                                quickhomedoctor@gmail.com
+                                Email Us
                             </a>
                         </p>
 

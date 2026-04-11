@@ -18,11 +18,11 @@ export const metadata = {
   metadataBase: new URL("https://quickhomedoctor.com"),
 
   title:
-    "Home Doctor & Nurse Visit | Delhi, Noida, Ghaziabad | Quick Home Doctor",
+    "Doctor & Nurse Home Visit | Quick Home Doctor",
   description:
-    "Doctor and nurse home visit within 30 minutes in Delhi NCR. 24/7 medical care at home.",
+    "Book certified MD & GP doctor or nurse home visit in Delhi, Noida, Gurgaon & Ghaziabad. Get medical care at home within 30 minutes. Available 24/7, 365 days.",
 
-  // ✅ ROBOTS (AUDIT PASSED)
+  //  ROBOTS (AUDIT PASSED)
   robots: {
     index: true,
     follow: true,
@@ -31,12 +31,12 @@ export const metadata = {
     maxVideoPreview: -1,
   },
 
-  // ✅ CANONICAL (IMPORTANT FIX)
+  // CANONICAL (IMPORTANT FIX)
   alternates: {
     canonical: "https://quickhomedoctor.com",
   },
 
-  // ✅ OPEN GRAPH (FIXED)
+  //  OPEN GRAPH (FIXED)
   openGraph: {
     title: "Quick Home Doctor – Doctor & Nurse Home Visit in Delhi NCR",
     description:
@@ -54,7 +54,7 @@ export const metadata = {
     type: "website",
   },
 
-  // ✅ TWITTER CARD
+  //  TWITTER CARD
   twitter: {
     card: "summary_large_image",
     title: "Quick Home Doctor – Home Visit Doctor & Nurse",
@@ -63,7 +63,7 @@ export const metadata = {
     images: ["/og-image.png"],
   },
 
-  // ✅ ICONS
+  //  ICONS
   icons: {
     icon: [{ url: "/favicon.ico" }],
     shortcut: [{ url: "/favicon.ico" }],

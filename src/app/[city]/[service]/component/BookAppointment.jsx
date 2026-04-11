@@ -1,22 +1,5 @@
 "use client";
 
-// ─────────────────────────────────────────────────────────────────────────────
-// BookAppointment.jsx
-// File path: src/components/BookAppointment.jsx
-//
-// Dependencies (install if not already):
-//   npm install @emailjs/browser
-//
-// Usage:
-//   import BookAppointment from "@/components/BookAppointment";
-//   <BookAppointment city={cityObj} areaName="Dwarka" />
-//
-// EmailJS env vars in .env.local:
-//   NEXT_PUBLIC_EMAILJS_SERVICE_ID=your_service_id
-//   NEXT_PUBLIC_EMAILJS_TEMPLATE_ID=your_template_id
-//   NEXT_PUBLIC_EMAILJS_PUBLIC_KEY=your_public_key
-// ─────────────────────────────────────────────────────────────────────────────
-
 import { useState, useRef } from "react";
 import emailjs from "@emailjs/browser";
 import { PUBLIC_KEY, SERVICE_ID, TEMPLATE_ID } from "@/constant";

@@ -161,7 +161,7 @@ export default function Navbar() {
 
               {/* Book Now */}
               <Link
-                href="/instant-booking"
+                href="/contact-us"
                 className="flex items-center gap-2 px-5 py-2.5 bg-[#C26418] text-white font-semibold rounded-xl hover:bg-[#c26518ed] transition text-sm shadow-md shadow-blue-200"
               >
                 Book Doctor Now

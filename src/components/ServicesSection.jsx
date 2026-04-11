@@ -26,10 +26,10 @@ export default function ServicesSection({ cityName = "Delhi NCR", citySlug }) {
             Our Services
           </span>
 
-          <h2 className="text-2xl sm:text-3xl md:text-4xl font-extrabold text-gray-900 mb-3">
+          <h3 className="text-2xl sm:text-3xl md:text-4xl font-extrabold text-gray-900 mb-3">
           Complete home healthcare solutions with {" "}
             <span className="text-brand-secondary">{cityName}</span>
-          </h2>
+          </h3>
 
           <p className="text-gray-500 text-base sm:text-lg max-w-2xl mx-auto">
           From expert doctor consultations, professional nursing, general physician and diagnostic support get 11+ most needed healthcare services across Delhi, Delhi NCR, Gurgaon, Ghaziabad, and Noida without leaving your home {cityName}.
