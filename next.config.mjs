@@ -59,7 +59,6 @@ const nextConfig = {
         permanent: true,
       },
       { source: "/inquiry", destination: "/contact-us", permanent: true },
-      { source: "/delhi", destination: "/delhi", permanent: true },
       // Services redirects
       {
         source: "/services/home-care",
