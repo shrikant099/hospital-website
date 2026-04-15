@@ -102,7 +102,7 @@ export default function ServicesSection({ cityName = "Delhi NCR", citySlug }) {
         {/* ── Bottom CTA ── */}
         <div className="mt-12 text-center">
           <p className="text-gray-500 text-sm mb-4">
-            Need immediate assistance? Reach us instantly —
+            Need immediate assistance? Reach us instantly
           </p>
           <div className="flex flex-row gap-3 justify-center">
             <a

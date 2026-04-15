@@ -23,7 +23,7 @@ export default function StepsSection() {
         {
             id: 3,
             title: "Doctor Visits Your Home",
-            desc: "A certified doctor or nurse arrives at your home for check-up, treatment or medical care — in 15 minutes.",
+            desc: "A certified doctor or nurse arrives at your home for check-up, treatment or medical care in 15 minutes.",
             icon: <MdHealthAndSafety className="text-brand-primary" size={65} />,
         },
     ];
@@ -40,11 +40,7 @@ export default function StepsSection() {
                     transition={{ duration: 0.6 }}
                     className="text-3xl md:text-4xl font-extrabold text-gray-800 mb-10 leading-snug"
                 >
-                    How it
-                    <span className="bg-gradient-to-r from-[#C26418] to-[#C26518] bg-clip-text text-transparent">
-                     Works 
-                    </span>{" "}
-                   | How to Book Doctor’s consultation at home in delhi 
+                   How to Book Doctor’s consultation at home in delhi 
                 </motion.h3>
 
                 {/* Steps Grid */}
