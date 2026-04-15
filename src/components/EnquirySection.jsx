@@ -4,6 +4,7 @@ import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import emailjs from "@emailjs/browser";
 import { SERVICE_ID, PUBLIC_KEY, TEMPLATE_ID,  } from "@/constant";
+import { useRouter } from "next/navigation";
 
 export default function EnquirySection() {
     const [open, setOpen] = useState(false);
@@ -17,7 +18,7 @@ export default function EnquirySection() {
 
     const [loading, setLoading] = useState(false);
     const [successMsg, setSuccessMsg] = useState("");
-
+const router = useRouter()
     const handleChange = (e) => {
         setForm({ ...form, [e.target.name]: e.target.value });
     };
@@ -40,6 +41,7 @@ export default function EnquirySection() {
             )
             .then(() => {
                 setLoading(false);
+                router.push("/thank-you");
                 setSuccessMsg("Thank you! Our team will call you shortly.");
                 setForm({
                     name: "",

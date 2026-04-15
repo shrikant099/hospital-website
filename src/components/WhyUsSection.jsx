@@ -16,7 +16,7 @@ export default function WhyUsSection({cityName = "QuickHomeDoctor"}) {
               <span className="text-brand-primary">{cityName}</span>
             </h2>
             <p className="text-gray-500 text-sm sm:text-base max-w-xl mx-auto">
-              Not generic claims — every point has a number or a proof behind it.
+              Not generic claims every point has a number or a proof behind it.
             </p>
           </div>
    
