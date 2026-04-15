@@ -45,15 +45,27 @@ const nextConfig = {
       { source: "/home-visits/noida", destination: "/noida", permanent: true },
       { source: "/home-visits/gurgaon", destination: "/gurgaon", permanent: true },
       { source: "/home-visits/ghaziabad", destination: "/ghaziabad", permanent: true },
-      { source: "/home-visits/delhi-ncr", destination: "/delhi-ncr", permanent: true },
+      { source: "/home-visits/delhi-ncr", destination: "/delhi", permanent: true },
+      { source: "/inquiry", destination: "/contact-us", permanent: true },
       // Services redirects
       { source: "/services/home-care", destination: "/delhi/doctor-at-home", permanent: true },
       { source: "/services/critical-care", destination: "/delhi/icu-at-home", permanent: true },
       { source: "/services/diagnostics", destination: "/delhi/blood-test-at-home", permanent: true },
       { source: "/services/other-services", destination: "/delhi/nurse-at-home", permanent: true },
+      {
+        source: "/:path*",
+        has: [
+          {
+            type: "host",
+            value: "www.quickhomedoctor.com",
+          }
+        ],
+        destination: "https://quickhomedoctor.com/:path*",
+        permanent: true,
+      }
     ];
   },
-  // turbopack wala block HATA DIYA — local Mac path tha jo production mein jaata tha
+  
 };
 
 export default nextConfig;

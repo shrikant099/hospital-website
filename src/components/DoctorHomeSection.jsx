@@ -64,7 +64,7 @@ export default function DoctorHomeSection() {
             </p>
 
             <Link
-            href={"/inquiry"}
+            href={"/contact-us"}
               onClick={() => router.push("/contact-us")}
               className="bg-brand-secondary text-white px-6 py-3 rounded-xl font-semibold transition"
             >
