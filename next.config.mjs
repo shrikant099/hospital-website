@@ -47,6 +47,7 @@ const nextConfig = {
       { source: "/home-visits/ghaziabad", destination: "/ghaziabad", permanent: true },
       { source: "/home-visits/delhi-ncr", destination: "/delhi", permanent: true },
       { source: "/inquiry", destination: "/contact-us", permanent: true },
+      {source:"/delhi-ncr", destination: "/delhi", permanent: true},
       // Services redirects
       { source: "/services/home-care", destination: "/delhi/doctor-at-home", permanent: true },
       { source: "/services/critical-care", destination: "/delhi/icu-at-home", permanent: true },
