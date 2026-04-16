@@ -16,7 +16,7 @@ export default function ServiceAreasSection({ currentCity = "Delhi NCR" }) {
 
           {/* H2 — Dynamic city name for SEO */}
           <h3 className="text-2xl sm:text-3xl md:text-4xl font-extrabold text-gray-900 mb-3">
-          Certified Home healthcare at home in Delhi, Noida, Gurgaon, Ghaziabad & Delhi NCR {" "}
+          Certified Home healthcare at home in Delhi, Noida, Gurgaon, Ghaziabad & New NCR {" "}
             {/* <span className="text-brand-primary-600">{currentCity}</span> */}
           </h3>
 
