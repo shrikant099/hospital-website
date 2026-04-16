@@ -51,13 +51,13 @@ export default function WhyUsSection({cityName = "QuickHomeDoctor"}) {
           {/* ── Bottom CTA ── */}
           <div className="mt-10 text-center">
             <Link
-              href="tel:+917303771900"
+              href="/contact-us"
               className="inline-flex items-center gap-2 px-8 py-4 bg-brand-secondary hover:bg-brand-secondary text-white font-bold rounded-xl text-sm sm:text-base shadow-lg shadow-blue-100 transition-all duration-200 hover:scale-105 active:scale-95"
             >
                Book a Doctor Now
             </Link>
             <p className="text-gray-400 text-xs mt-3">
-              Responds in under 2 minutes · Available 24/7
+              Responds in under 2 minutes Available 24/7
             </p>
           </div>
    

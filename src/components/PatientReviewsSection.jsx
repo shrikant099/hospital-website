@@ -27,7 +27,7 @@ export default function PatientReviewsSection({ cityName = "Delhi NCR" }) {
    
             {/* H2 — dynamic city name for SEO */}
             <h3 className="text-2xl sm:text-3xl md:text-4xl font-extrabold text-gray-900 mb-3">
-              What Patients Are Saying
+              What Patients Are Saying &nbsp;
               <span className="text-brand-primary">{cityName}</span>
             </h3>
    

@@ -3,6 +3,7 @@
 import { useState, useRef } from "react";
 import emailjs from "@emailjs/browser";
 import { PUBLIC_KEY, SERVICE_ID, TEMPLATE_ID } from "@/constant";
+import { useRouter } from "next/navigation";
 
 const TIME_SLOTS = [
   "10:00 AM – 12:00 PM",
@@ -57,6 +58,7 @@ const SpinnerIcon = () => (
 // ─────────────────────────────────────────────────────────────────────────────
 
 export default function BookAppointment({ city, areaName }) {
+
   const [form, setForm] = useState({
     name: "",
     mobile: "",
@@ -66,7 +68,7 @@ export default function BookAppointment({ city, areaName }) {
   });
   const [status, setStatus] = useState("idle"); // idle | loading | success | error
   const [errors, setErrors] = useState({});
-
+  const router = useRouter();
   // ── validation ─────────────────────────────────────────────────────────────
   const validate = () => {
     const e = {};
@@ -116,6 +118,16 @@ export default function BookAppointment({ city, areaName }) {
         PUBLIC_KEY
       );
       setStatus("success");
+        // GTM dataLayer push
+        window.dataLayer = window.dataLayer || [];
+        window.dataLayer.push({
+          event: "lead_submit",
+          form_name: "area_BookAppointment_form",
+          area: areaName,
+          city: city.name,
+        });
+        // Redirect to thank-you page
+        router.push("/thank-you");
     } catch (err) {
       console.error("EmailJS error:", err);
       setStatus("error");

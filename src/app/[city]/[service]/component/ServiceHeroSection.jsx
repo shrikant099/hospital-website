@@ -6,6 +6,7 @@ import { Phone, ChevronRight } from "lucide-react";
 import { ENQUIRY_TEMPLATE_ID, PUBLIC_KEY, SERVICE_ID } from "@/constant";
 import emailjs from "@emailjs/browser";
 import { PhoneIcon } from "lucide-react";
+import { useRouter } from "next/navigation";
 
 export default function ServiceHeroSection({ city, service }) {
   const [loading, setLoading] = useState(false);
@@ -14,6 +15,7 @@ export default function ServiceHeroSection({ city, service }) {
   const [name, setName] = useState("");
   const [phone, setPhone] = useState("");
   const [submitted, setSubmitted] = useState(false);
+  const router = useRouter();
 
   const handleSubmit = async (e) => {
     e.preventDefault();
@@ -45,6 +47,16 @@ export default function ServiceHeroSection({ city, service }) {
 
       setName("");
       setPhone("");
+
+      // GTM dataLayer push + redirect
+      window.dataLayer = window.dataLayer || [];
+      window.dataLayer.push({
+        event: "lead_submit",
+        form_name: "service_hero_form",
+        service: service.name,
+        city: city.name, 
+      });
+      router.push("/thank-you");
     } catch (err) {
       setIsSuccess(false);
       setMessage("Something went wrong. Please try again.");
@@ -99,11 +111,11 @@ export default function ServiceHeroSection({ city, service }) {
             {/* CTA Buttons */}
             <div className="flex flex-wrap gap-3 mb-10">
               <a
-                href="tel:+917303771900"
+                href="/contact-us"
                 className="inline-flex items-center gap-2 bg-[#c26418] hover:bg-[#a8531a] text-white font-bold text-sm sm:text-base px-7 py-3.5 rounded-lg shadow-sm hover:scale-105 active:scale-95 transition-all duration-200"
               >
-                <Phone className="w-4 h-4" />
-                Book Home Visit
+               
+               Contact Us
               </a>
               <a
                 href="tel:+917303771900"

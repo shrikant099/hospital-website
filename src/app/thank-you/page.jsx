@@ -1,3 +1,5 @@
+import LeadTracker from "./components/LeadTracker";
+
 export const metadata = {
     title: "Thank You | Quick Home Doctor",
     description: "Thank you for contacting Quick Home Doctor. Our team will reach out shortly.",
@@ -11,6 +13,7 @@ export const metadata = {
 export default function ThankYouPage() {
     return (
         <section className="min-h-screen flex flex-col justify-center items-center text-center px-5">
+            <LeadTracker />
             <h1 className="text-4xl font-bold text-[#005f5e]">Thank You!</h1>
             <p className="mt-4 text-gray-600 max-w-xl">
                 Your request has been received. Our medical team will contact you shortly.

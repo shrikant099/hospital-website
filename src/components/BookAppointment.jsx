@@ -71,6 +71,15 @@ export default function BookAppointment({ service, city }) {
           timeSlot: "08:00 - 10:00 AM",
           message: "",
         });
+
+        // GTM dataLayer push
+        window.dataLayer = window.dataLayer || [];
+        window.dataLayer.push({
+          event: "lead_submit",
+          form_name: "service_BookAppointment_form",
+          service: service.name,
+          city: city.name,
+        });
         // Redirect To thank-you page
         router.push("/thank-you");
       })
@@ -251,7 +260,7 @@ export default function BookAppointment({ service, city }) {
           <Link
             href="https://wa.me/7303771900"
             target="_blank"
-            className="bg-brand-secondary text-white mt-6 px-8 py-3 rounded-full font-semibold shadow-md hover:bg-blue-700 transition flex items-center gap-2"
+            className="bg-brand-secondary text-white mt-6 px-8 py-3 rounded-full font-semibold shadow-md transition flex items-center gap-2"
           >
             WhatsApp Us
           </Link>

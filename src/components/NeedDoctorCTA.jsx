@@ -24,7 +24,7 @@ export default function NeedDoctorCTA({ cityName = "", areaName = "" }) {
             {/* Subtext */}
             <p className="text-gray-500 text-sm sm:text-base max-w-lg mx-auto mb-8 leading-relaxed">
               Our certified MBBS & MD doctors are ready to visit your home in{" "}
-              {cityName}. Available 24/7 — including nights, weekends &
+              {cityName}. Available 24/7 including nights, weekends &
               holidays.
             </p>
 

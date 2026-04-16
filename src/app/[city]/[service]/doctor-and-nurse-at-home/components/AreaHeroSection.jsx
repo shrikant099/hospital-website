@@ -6,6 +6,7 @@ import { replacePlaceholders as rp } from "@/utils/replacePlaceholders";
 import { areaContent } from "@/data/areaContent";
 import emailjs from "@emailjs/browser";
 import { ENQUIRY_TEMPLATE_ID, PUBLIC_KEY, SERVICE_ID } from "@/constant";
+import { useRouter } from "next/navigation";
 
 export default function AreaHeroSection({ areaName, cityName, citySlug }) {
   const [name, setName] = useState("");
@@ -17,7 +18,7 @@ export default function AreaHeroSection({ areaName, cityName, citySlug }) {
   const { hero } = areaContent;
   const title = rp(hero.heroTitle, areaName, cityName);
   const description = rp(hero.heroDescription, areaName, cityName);
-
+  const router = useRouter();
   // Split title for styled rendering:
 
   const handleSubmit = async (e) => {
@@ -52,6 +53,16 @@ export default function AreaHeroSection({ areaName, cityName, citySlug }) {
       setName("");
       setPhone("");
   
+      // GTM dataLayer push
+      window.dataLayer = window.dataLayer || [];
+      window.dataLayer.push({
+        event: "lead_submit",
+        form_name: "area_hero_form",
+        area: areaName,
+        city: cityName,
+      });
+
+      router.push("/thank-you");
     } catch (error) {
       console.error("Booking error:", error);
       setStatus("error");
@@ -112,10 +123,9 @@ export default function AreaHeroSection({ areaName, cityName, citySlug }) {
             {/* CTA Buttons */}
             <div className="flex flex-wrap gap-3 mb-8">
               <a
-                href="tel:+917303771900"
+                href="/contact-us"
                 className="inline-flex items-center gap-2 bg-[#c26418] hover:bg-[#a8531a] text-white font-bold text-sm px-6 py-3.5 rounded-xl shadow-sm hover:shadow-md transition-all duration-200"
               >
-                <PhoneIcon />
                 Book Home Visit
               </a>
               <a

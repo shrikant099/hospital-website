@@ -91,10 +91,9 @@ export default function AreaServicesSection({ areaName, cityName }) {
         {/* Bottom CTA */}
         <div className="mt-8 flex flex-col sm:flex-row gap-3 sm:items-center">
           <a
-            href="tel:+917303771900"
+            href="/contact-us"
             className="inline-flex items-center justify-center gap-2 bg-[#C26418] hover:bg-[#a8531a] text-white font-bold text-sm px-7 py-3.5 rounded-xl shadow-sm hover:shadow-md transition-all duration-200"
           >
-            <PhoneIcon />
             Book Home Visit
           </a>
           <a

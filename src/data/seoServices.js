@@ -11,6 +11,8 @@ export const seoServices = [
     slug: "doctor-at-home",
     name: "Doctor at Home",
     keyword: "doctor at home",
+    treat: "Doctor",
+    heroDesc: "Skip the hospital and medical clinics' rush. Get a certified doctor at your home in {city} fast, safe, and without the stress of {trafficNote}.",
     shortDesc:
       "Certified MBBS/MD doctor at your doorstep in 15 minutes. Available 24/7.",
     longDesc:

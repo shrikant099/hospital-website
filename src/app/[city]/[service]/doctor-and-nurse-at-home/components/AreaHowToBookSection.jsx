@@ -133,7 +133,7 @@ const STEPS = [
           {/* ── CTA buttons ── */}
           <div className="mt-10 sm:mt-12 flex flex-col sm:flex-row gap-3 justify-center items-center">
             <a
-              href="#book"
+              href="/contact-us"
               className="w-full sm:w-auto inline-flex items-center justify-center gap-2 bg-[var(--brand-primary,#0d6efd)] text-white font-bold text-sm px-7 py-3 rounded-full shadow-md shadow-blue-200 hover:shadow-lg hover:scale-105 transition-all duration-200"
               aria-label={`Book a home visit in ${areaName}`}
             >

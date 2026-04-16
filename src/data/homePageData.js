@@ -145,13 +145,13 @@ export const cities = [
 // Why Us Section Data
 export const reasons = [
   {
-    title: "Doctor at your door in 15 minutes — guaranteed",
-    desc: "We track ETA and commit to our response time — day or night.",
+    title: "Doctor at your door in 15 minutes guaranteed",
+    desc: "We track ETA and commit to our response time day or night.",
     icon: "⚡",
   },
   {
     title: "Certified MD & GP Doctors only",
-    desc: "Every doctor is MBBS/MD verified — not just a health worker or attendant.",
+    desc: "Every doctor is MBBS/MD verified not just a health worker or attendant.",
     icon: "🩺",
   },
   {
@@ -161,17 +161,17 @@ export const reasons = [
   },
   {
     title: "Serving Delhi, Noida, Gurgaon, Ghaziabad",
-    desc: "5 cities covered — one call connects you to the nearest doctor.",
+    desc: "5 cities covered one call connects you to the nearest doctor.",
     icon: "🗺️",
   },
   {
     title: "6,000+ patients treated at home",
-    desc: "From routine check-ups to post-surgery recovery — trusted since day one.",
+    desc: "From routine check-ups to post-surgery recovery trusted since day one.",
     icon: "❤️",
   },
   {
     title: "Call, WhatsApp, or book online",
-    desc: "Choose how you reach us — we respond within minutes.",
+    desc: "Choose how you reach us we respond withiResponds in under 2 minutes · Available 24/7n minutes.",
     icon: "📞",
   },
 ];
@@ -201,7 +201,7 @@ export const reviews = [
   },
 ];
 
-// ── FAQ Data — city ke hisab se alag alag 
+// ── FAQ Data city ke hisab se alag alag 
 export const cityFAQs = {
   default: [
     {
