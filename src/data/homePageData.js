@@ -132,13 +132,13 @@ export const cities = [
     linkLabel: "View all services in Ghaziabad",
   },
   {
-    slug: "delhi-ncr",
-    name: "Delhi NCR",
+    slug: "new-delhi",
+    name: "New Delhi",
     badge: null,
     areas: "Delhi, Noida, Gurgaon, Ghaziabad, Faridabad & more",
     services: ["All 11 services", "Pan NCR"],
     extraCount: null,
-    linkLabel: "View NCR coverage",
+    linkLabel: "View coverage",
   },
 ];
 
@@ -205,15 +205,15 @@ export const reviews = [
 export const cityFAQs = {
   default: [
     {
-      q: "How quickly can I get a doctor home visit in Delhi NCR?",
+      q: "How quickly can I get a doctor home visit in New Delhi?",
       a: "In most cases, a doctor can reach your home within 15–30 minutes, depending on your location and availability.",
     },
     {
-      q: "Is doctor home visit service available 24/7 in Delhi NCR?",
+      q: "Is doctor home visit service available 24/7 in New Delhi?",
       a: "Yes, QuickHomeDoctor offers 24/7 doctor home visit services, including late nights, weekends, and emergencies.",
     },
     {
-      q: "What is the cost of a doctor home visit in Delhi NCR?",
+      q: "What is the cost of a doctor home visit in New Delhi?",
       a: "The cost depends on factors like location, type of consultation, and urgency. For exact pricing, please call us to confirm.",
     },
     {
@@ -338,21 +338,21 @@ export const cityFAQs = {
     },
   ],
  
-  "delhi-ncr": [
+  "new-delhi": [
     {
-      q: "How quickly can I get a doctor home visit in Delhi NCR?",
-      a: "In most cases, a doctor can reach your home within 15–30 minutes across Delhi NCR depending on your location.",
+      q: "How quickly can I get a doctor home visit in New Delhi?",
+      a: "In most cases, a doctor can reach your home within 15–30 minutes across New Delhi depending on your location.",
     },
     {
-      q: "Is doctor home visit service available 24/7 in Delhi NCR?",
-      a: "Yes, QuickHomeDoctor offers 24/7 doctor home visit services across all Delhi NCR cities including emergencies.",
+      q: "Is doctor home visit service available 24/7 in New Delhi?",
+      a: "Yes, QuickHomeDoctor offers 24/7 doctor home visit services across all New Delhi cities including emergencies.",
     },
     {
       q: "Which cities in NCR are covered?",
       a: "We cover Delhi, Noida, Gurgaon, Ghaziabad, Faridabad and surrounding NCR areas. Call to confirm coverage for your pincode.",
     },
     {
-      q: "What is the cost of a doctor home visit in Delhi NCR?",
+      q: "What is the cost of a doctor home visit in New Delhi?",
       a: "Charges depend on location, consultation type and urgency. Call us for transparent and accurate pricing.",
     },
     {
@@ -360,7 +360,7 @@ export const cityFAQs = {
       a: "Yes, our doctors carry basic medicines and equipment so treatment can begin immediately at your home.",
     },
     {
-      q: "What health issues can be treated at home in Delhi NCR?",
+      q: "What health issues can be treated at home in New Delhi?",
       a: "Fever, infections, elderly care, blood pressure, diabetes, wound care, post-surgery recovery and more — all handled at home across NCR.",
     },
   ],
