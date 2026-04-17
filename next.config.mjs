@@ -29,9 +29,6 @@ const nextConfig = {
       },
     ];
   },
-  experimental: {
-    optimizePackageImports: ["react-icons", "lucide-react"],
-  },
   async redirects() {
     return [
       // Purana redirect — rakho isko

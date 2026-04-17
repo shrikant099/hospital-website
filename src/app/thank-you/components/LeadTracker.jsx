@@ -14,4 +14,6 @@ export default function LeadTracker () {
             sessionStorage.setItem("lead_tracked", "true");
           }
     },[])
+
+    return null;
 }
